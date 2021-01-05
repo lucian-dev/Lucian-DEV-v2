@@ -1,0 +1,65 @@
+<?php
+/*Template Name: About*/
+?>
+
+<?php get_header();?>
+
+<div id="yabu-main" class="section about yabu-scene">
+    <div class="display-content scene_element scene_element--fadeinright">
+        <div class="container">
+            <div class="main-title text-center">
+                <h1><?php echo get_field( 'main_title_about' )[ 'title' ];?></h1>
+                <p><?php echo get_field( 'main_title_about' )[ 'sub_title' ];?></p>
+            </div>
+            <div class="row content-about">
+                <div class="col-md">
+                    <?php the_field( 'about_text' );?>
+                </div>
+                <div class="col-md">
+                    <div class="skill-wrapper">
+                        <?php if ( have_rows( 'loop_skill' ) ) : while ( have_rows( 'loop_skill' )) : the_row();?>
+                            <div class="skill"><?php the_sub_field( 'skill' );?></div>
+                        <?php endwhile; endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span class="line-separator"></span>
+
+<div id="yabu-main" class="section features yabu-scene">
+    <div class="display-content scene_element scene_element--fadeinleft">
+        <div class="container">
+            <div class="main-title">
+                <h2><?php echo the_field( 'main_title_features' );?></h2>
+            </div>
+            <div class="row loop-features">
+                <?php if ( have_rows('loop_features') ) : while ( have_rows( 'loop_features' )) : the_row();?>
+                <div class="col-sm">
+                    <div class="feature-inner">
+                        <div class="icon-feature">
+                            <img src="<?php the_sub_field( 'feature_icon' );?>" alt="">
+                        </div>
+                        <div class="feature-info">
+                            <h4><?php the_sub_field( 'feature_title' );?></h4>
+                            <p><?php the_sub_field( 'feature_info' );?></p>
+                            <a href="<?php the_sub_field( 'btn_feature' );?>" class="btn"><?php _e( 'Contact Me' );
+                            ?></a>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span class="line-separator"></span>
+
+<?php get_template_part( 'content','recent-projects' );?>
+
+<span class="line-separator"></span>
+
+<?php get_footer();?>

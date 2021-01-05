@@ -1,0 +1,145 @@
+/* Slider
+
+.slick-slider
+  position: relative
+  display: block
+  box-sizing: border-box
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  -webkit-touch-callout: none
+  -khtml-user-select: none
+  -ms-touch-action: pan-y
+  touch-action: pan-y
+  -webkit-tap-highlight-color: transparent
+
+.slick-list
+  position: relative
+  display: block
+  overflow: hidden
+  margin: 0
+  padding: 0
+  &:focus
+    outline: none
+  &.dragging
+    cursor: pointer
+    cursor: hand
+
+.slick-slider
+  .slick-track, .slick-list
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.slick-track
+  position: relative
+  top: 0
+  left: 0
+  display: block
+  margin-left: auto
+  margin-right: auto
+  &:before
+    display: table
+    content: ''
+  &:after
+    display: table
+    content: ''
+    clear: both
+
+.slick-loading .slick-track
+  visibility: hidden
+
+.slick-slide
+  display: none
+  float: left
+  height: 100%
+  min-height: 1px
+  outline: 0
+
+[dir='rtl'] .slick-slide
+  float: right
+
+
+.slick-initialized .slick-slide
+  display: block
+
+.slick-loading .slick-slide
+  visibility: hidden
+
+.slick-vertical .slick-slide
+  display: block
+  height: auto
+  border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+  display: none
+
+
+
+/* Arrows
+
+.slick-prev, .slick-next
+  font-size: 0
+  line-height: 0
+  position: absolute
+  top: 50%
+  display: block
+  width: 30px
+  height: 30px
+  padding: 0
+  transform: translate(0, -50%)
+  cursor: pointer
+  color: transparent
+  border: none
+  outline: none
+  z-index: 88
+  background-color: transparent
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: contain
+  transition: all .3s ease-in-out
+  &:hover, &:focus
+    color: transparent
+    outline: none
+
+/* Dots
+
+.slick-dots
+  position: absolute
+  bottom: -25px
+  left: 0
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  li
+    position: relative
+    display: inline-block
+    height: 10px
+    padding: 3px
+    cursor: pointer
+    button
+      appearance: none
+      font-size: 0
+      line-height: 0
+      display: block
+      width: 15px
+      height: 5px
+      border: 1px solid var(--secondary-color)
+      border-radius: 50px
+      outline: 0
+      background-color: transparent
+      transition: all .3s ease-in-out
+      &:hover
+        background: var(--primary-color)
+  li.slick-active button
+    background: var(--secondary-color)
+    border: 1px solid var(--primary-color)
+    width: 25px
+
+

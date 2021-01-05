@@ -1,0 +1,85 @@
+// Content About Page
+.content-about {
+  position: relative;
+  align-items: center;
+  .col-md p:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+  .col-md a {
+    color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  .skill-wrapper {
+    max-width: 275px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+    .skill {
+      padding: 10px 0;
+      font-family: $poppins;
+      font-size: 22px;
+      line-height: 22px;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    .skill:before {
+      content: "\2713";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+      font-size: 18px;
+      line-height: 26px;
+      text-align: center;
+      color: $primaryColorLt;
+      margin-right: 15px;
+      background-color: #FFFFFF;
+    }
+  }
+}
+
+//Features
+.loop-features {
+  .col-sm:not(:last-of-type) {
+    .feature-info a {
+      display: none;
+    }
+  }
+  .feature-inner {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+  }
+  .icon-feature {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f1f3f6;
+    box-shadow: inset 3px 3px 3px #dadada, inset -3px -3px 3px #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -25px auto 0;
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .feature-info {
+    padding: 15px 0;
+    h4 {
+      margin-bottom: 10px;
+    }
+    a {
+      margin-top: 15px;
+    }
+  }
+}

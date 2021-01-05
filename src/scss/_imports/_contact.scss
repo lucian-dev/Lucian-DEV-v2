@@ -1,0 +1,39 @@
+.content-contact {
+  position: relative;
+  .col-md {
+    text-align: center;
+  }
+  span.contact-icon {
+    display: block;
+    width: 25px;
+    margin: auto;
+    svg {
+      display: block;
+      fill: var(--secondary-color);
+    }
+  }
+  h5 {
+    margin: 15px auto;
+  }
+  a {
+    display: inline-block;
+    color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+  }
+  a:hover {
+    color: var(--primary-color);
+  }
+  img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    filter: grayscale(100%);
+    transition: all .3s ease-in-out;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+.form-wrapper {
+  margin-top: 40px;
+}

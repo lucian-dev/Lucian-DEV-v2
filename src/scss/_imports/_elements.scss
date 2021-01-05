@@ -1,0 +1,127 @@
+// Dark Mode Switch
+.yabu-theme-switch-wrapper {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-text {
+  font-size: 13px;
+  line-height: 13px;
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+label.theme-switch {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider-switch {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  background: $secondaryColorLt;
+  border-radius: 34px;
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+  }
+  svg:nth-child(1) {
+    left: 10px;
+  }
+  svg:nth-child(2) {
+    right: 10px;
+  }
+}
+
+.slider-switch::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transition: 0.4s;
+  background: transparentize($color: #ffffff, $amount: 0.5);
+}
+
+.theme-switch input:checked + .slider-switch::before {
+  transform: translate(26px, -50%);
+}
+
+.yabu-scene {
+  .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+  .scene_element--fadeinup {
+    animation-name: fadeInUp;
+  }
+  .scene_element--fadeinright {
+    animation-name: fadeInRight;
+  }
+  .scene_element--fadeinleft {
+    animation-name: fadeInLeft;
+  }
+}
+
+.cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+span.line-separator {
+  position: relative;
+  display: block;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary-color);
+    animation: loop-line 25s linear 2s infinite alternate;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.col-md {
+  width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-sm {
+  width: 33.33%;
+  padding: 15px;
+}

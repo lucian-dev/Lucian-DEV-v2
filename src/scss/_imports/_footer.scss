@@ -106,7 +106,7 @@
 .cookie-inner {
   padding: 15px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   box-shadow: 0 5px 15px rgba(0,0,0,.1);
   font-size: 14px;
   line-height: 20px;
@@ -138,14 +138,16 @@
     letter-spacing: 1px;
     border-radius: 5px;
     padding: 8px 15px;
-    color: var(--secondary-color);
+    color: $secondaryColorLt;
+    background-color: #FFFFFF;
     border-radius: 10px;
     outline: none;
     border: none;
-    box-shadow: 3px 3px 3px #dadada, -3px -3px 3px #f2f2f2;
+    box-shadow: var(--box-shadow);
     text-transform: uppercase;
   }
   span.accept-cookie:hover {
-    box-shadow: 1px 1px 1px #dadada, -1px -1px 1px #fafafa;
+    background-color: var(--secondary-color);
+    color: #ffffff;
   }
 }

@@ -115,17 +115,21 @@
 @-webkit-keyframes scroll {
   from {
     top: 15%;
+    opacity: 1;
   }
   to {
     top: 75%;
+    opacity: 0.1;
   }
 }
 @keyframes scroll {
   from {
     top: 15%;
+    opacity: 1;
   }
   to {
     top: 75%;
+    opacity: 0.1;
   }
 }
 @-webkit-keyframes updown {
@@ -688,162 +692,6 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
     padding-left: 0;
   }
 }
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track, .slick-slider .slick-list {
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.slick-track:before {
-  display: table;
-  content: "";
-}
-.slick-track:after {
-  display: table;
-  content: "";
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  outline: 0;
-}
-
-[dir=rtl] .slick-slide {
-  float: right;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
-/* Arrows */
-.slick-prev, .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  z-index: 88;
-  background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: all 0.3s ease-in-out;
-}
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
-  color: transparent;
-  outline: none;
-}
-
-/* Dots */
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  height: 10px;
-  padding: 3px;
-  cursor: pointer;
-}
-.slick-dots li button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 15px;
-  height: 5px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 50px;
-  outline: 0;
-  background-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-.slick-dots li button:hover {
-  background: var(--primary-color);
-}
-.slick-dots li.slick-active button {
-  background: var(--secondary-color);
-  border: 1px solid var(--primary-color);
-  width: 25px;
-}
-
 .main-header {
   height: 100vh;
   width: 125px;
@@ -1042,12 +890,17 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
           animation: scroll 2.5s infinite;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
 .loop-testimonials {
   position: relative;
 }
 .loop-testimonials .testimonial {
   padding: 15px;
-  margin: 50px 5px 15px;
+  margin: 50px 15px;
   border-radius: 10px;
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
@@ -1099,6 +952,19 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 }
 .loop-testimonials .author-info a:hover {
   color: var(--primary-color);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 15px;
+  height: 5px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  width: 25px;
 }
 
 .main-footer {

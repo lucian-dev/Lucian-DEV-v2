@@ -54,9 +54,11 @@
 @keyframes scroll {
   from {
     top: 15%;
+    opacity: 1;
   }
   to {
     top: 75%;
+    opacity: 0.1;
   }
 }
 

@@ -71,6 +71,19 @@
   }
 }
 
+@keyframes updownTh {
+  from {
+    object-position: top;
+  }
+  to {
+    object-position: bottom;
+  }
+}
+
+.onHover {
+  animation: updownTh 10s both infinite;
+}
+
 /**** Isotope CSS3 transitions ****/
 
 .isotope,

@@ -148,6 +148,29 @@
     background-position: top center;
   }
 }
+@-webkit-keyframes updownTh {
+  from {
+    object-position: top;
+  }
+  to {
+    object-position: bottom;
+  }
+}
+@keyframes updownTh {
+  from {
+    -o-object-position: top;
+       object-position: top;
+  }
+  to {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+}
+.onHover {
+  -webkit-animation: updownTh 10s both infinite;
+          animation: updownTh 10s both infinite;
+}
+
 /**** Isotope CSS3 transitions ****/
 .isotope,
 .isotope .isotope-item {
@@ -1203,36 +1226,41 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   margin: 5px;
 }
 
-.project-item {
-  display: block;
-  cursor: pointer;
-}
-.project-item .project-image {
+.project-wrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
+}
+.project-wrapper .project-inner {
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   overflow: hidden;
-  background-color: #f1f3f6;
-  padding: 5px;
-  box-shadow: var(--box-shadow);
   transition: all 0.3s ease-in-out;
 }
-.project-item .project-image:before {
-  content: "";
-  display: block;
-  padding-top: 75%;
+.project-wrapper .project-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transition: all 0.3s ease-in-out;
 }
-.project-item .project-image img {
+.project-wrapper .project-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.project-wrapper .project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: top;
      object-position: top;
 }
-.project-item span.project-progress {
+.project-wrapper span.project-progress {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: var(--secondary-color);
+  background-color: #5f5f5f;
   padding: 5px 10px;
   color: #FFFFFF;
   font-size: 13px;
@@ -1240,50 +1268,35 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   font-weight: bold;
   border-bottom-right-radius: 10px;
 }
-.project-item .project-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 25px 10px;
-  border-top: 2px solid #f1f3f6;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  text-align: center;
-  transition: all 0.5s ease-in-out;
+.project-wrapper .project-info {
+  padding: 25px 15px;
+  background-color: var(--background-color);
+  border-top: 1px solid #f1f3f6;
 }
-.project-item .project-title h4 {
-  color: #343a40;
+.project-wrapper .project-info span {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 13px;
+  color: var(--secondary-color);
 }
-.project-item .project-icon {
-  width: 35px;
-  height: 35px;
-  margin: 10px auto 0;
-  background-color: #FFFFFF;
-  border: 1px solid #e1e1e1;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s ease-in-out;
-}
-.project-item .project-icon svg {
+.project-wrapper .project-info span:after {
+  content: "";
   display: block;
-  width: 20px;
-  fill: #343a40;
-  height: 20px;
-  transition: all 0.6s ease-in-out;
+  width: 25px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  margin: 5px 0 2px;
 }
-.project-item:hover .project-icon {
-  background-color: #5f5f5f;
+.project-wrapper .project-info a {
+  display: inline-block;
+  color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
 }
-.project-item:hover .project-icon svg {
-  fill: #e1e1e1;
-}
-.project-item:hover .project-image {
+.project-wrapper:hover .project-inner {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.project-wrapper:hover .project-inner .project-info a {
+  color: var(--secondary-color);
 }
 
 #progressbar {

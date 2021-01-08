@@ -6,25 +6,29 @@
   }
 }
 
-.project-item {
-  display: block;
-  cursor: pointer;
+.project-wrapper {
+  position: relative;
+  .project-inner {
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+  }
   .project-image {
     position: relative;
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #f1f3f6;
-    padding: 5px;
-    box-shadow: var(--box-shadow);
+    height: 300px;
     transition: all .3s ease-in-out;
-    &:before {
-      content: "";
+    a {
       display: block;
-      padding-top: 75%;
+      width: 100%;
+      height: 100%;
     }
     img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       object-position: top;
     }
   }
@@ -33,7 +37,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: var(--secondary-color);
+    background-color: $secondaryColorLt;
     padding: 5px 10px;
     color: #FFFFFF;
     font-size: 13px;
@@ -41,50 +45,35 @@
     font-weight: bold;
     border-bottom-right-radius: 10px;
   }
-  .project-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 25px 10px;
-    border-top: 2px solid #f1f3f6;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: transparentize( #ffffff, 0.3);
-    text-align: center;
-    transition: all .5s ease-in-out;
-    h4 {
-      color: $primaryColorLt;
+  .project-info {
+    padding: 25px 15px;
+    background-color: var(--background-color);
+    border-top: 1px solid #f1f3f6;
+    span {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 13px;
+      color: var(--secondary-color);
+      &:after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 1px;
+        background-color: var(--secondary-color);
+        margin: 5px 0 2px;
+      }
+    }
+    a {
+      display: inline-block;
+      color: var(--primary-color);
+      transition: all .5s ease-in-out;
     }
   }
-  .project-icon {
-    width: 35px;
-    height: 35px;
-    margin: 10px auto 0;
-    background-color: #FFFFFF;
-    border: 1px solid #e1e1e1;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .5s ease-in-out;
-    svg {
-      display: block;
-      width: 20px;
-      fill: $primaryColorLt;
-      height: 20px;
-      transition: all .6s ease-in-out;
-    }
-  }
-  &:hover .project-icon {
-    background-color: $secondaryColorLt;
-    svg {
-      fill: #e1e1e1;
-    }
-  }
-  &:hover .project-image {
+  &:hover .project-inner {
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    .project-info a {
+      color: var(--secondary-color);
+    }
   }
 }
 

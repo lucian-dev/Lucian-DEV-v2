@@ -12587,7 +12587,7 @@ jQuery(document).ready(function ($) {
 
   var $grid = $('.loop-projects');
   $grid.isotope({
-    itemSelector: '.project-item',
+    itemSelector: '.project-isotope',
     layoutMode: 'fitRows',
     percentPosition: true,
     masonry: {
@@ -12607,6 +12607,13 @@ jQuery(document).ready(function ($) {
       $buttonGroup.find('.is-checked').removeClass('is-checked');
       $(this).addClass('is-checked');
     });
+  }); // Project Thumbnail Animation
+
+  $('.project-th').mouseover(function () {
+    $(this).addClass('onHover');
+  });
+  $('.project-th').mouseout(function () {
+    $(this).removeClass('onHover');
   }); //Project Progress
 
   var progressBarr = $('#progressbar').circleProgress({

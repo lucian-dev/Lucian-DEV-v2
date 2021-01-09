@@ -1687,6 +1687,9 @@ body.page-template-page-home .display-content {
     padding: 15px 0;
   }
 
+  .loop-testimonials .testimonial {
+    margin: 50px 5px;
+  }
   .loop-testimonials .author-testimonial {
     text-align: center;
   }

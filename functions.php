@@ -82,18 +82,49 @@ add_action( 'init','register_projects_yabu' );
 
 function custom_taxonomy_yabu() {
 
+    //Project Categories Taxonomy
     $labels = array(
-        'name'          => _x( 'Categories', 'Taxonomy general name', 'yabu' ),
+        'name'          => _x( 'Categories', 'taxonomy general name', 'yabu' ),
+        'singular_name' => _x( 'Category', 'taxonomy singular name', 'yabu' ),
         'add_new_item'  => __('Add new category','yabu'),
+        'menu_name'     => __( 'Categories','yabu' )
     );
 
     $args = array(
-        'labels'            => $labels,
-        'hierarchical'      => true,
-        'singular_label'    => __('Field'),
-        'rewrite'           => array( 'slug'=>'fields','with_front'=>false),
+        'hierarchical'          => true,
+        'labels'                => $labels,
+        'query_var'             => true,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'rewrite'               => array( 'slug'=>'category' ),
     );
-    register_taxonomy( 'project-category', array( 'project' ), $args );
+    register_taxonomy( 'project-category', 'project', $args );
+
+    unset( $args );
+    unset( $labels );
+
+    //Project Tags Taxonomy
+    $labels = array(
+        'name'                       => _x( 'Tags', 'taxonomy general name', 'yabu' ),
+        'singular_name'              => _x( 'Tag', 'taxonomy singular name', 'yabu' ),
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'add_new_item'               => __( 'Add New Tag', 'yabu' ),
+        'menu_name'                  => __( 'Tags', 'yabu' ),
+    );
+
+    $args = array(
+        'hierarchical'          => false,
+        'labels'                => $labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var'             => true,
+        'rewrite'               => array('slug' => 'tag'),
+    );
+
+    register_taxonomy( 'tag', 'project', $args );
+
 }
 add_action( 'init', 'custom_taxonomy_yabu');
 

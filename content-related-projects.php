@@ -6,11 +6,12 @@
             </div>
             <?php
                 $args = array(
-                    'post_type'      => 'project',
-                    'posts_per_page' => 3,
-                    'order' => 'DESC',
-                    'orderby' => 'rand',
-                    'post__not_in' => array($post->ID)
+                    'post_type'         => 'project',
+                    'category__in'      => wp_get_post_categories( get_the_ID()),
+                    'post__not_in'      => array(get_the_ID()),
+                    'posts_per_page'    => 3,
+                    'orderby'           => 'rand',
+                    'order'             => 'ASC'
                 );
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts()) : ?>
@@ -27,6 +28,15 @@
                                     </a>
                                 </div>
                                 <div class="project-info">
+                                    <?php 
+                                        $categories = get_the_terms( $post->ID, 'project-category');
+                                        if ( !empty($categories) && ! is_wp_error( $categories )){
+                                            foreach ($categories as $category) {
+                                                echo '<span>' . $category->name . '</span>';
+                                            } 
+                                        }
+                                        
+                                    ?>
                                     <h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
                                 </div>
                             </div>

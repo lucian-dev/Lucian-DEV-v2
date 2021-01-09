@@ -37,7 +37,7 @@
             if ( $loop->have_posts()) : ?>
                 <div class="loop-projects">
                     <?php while ( $loop->have_posts()) : $loop->the_post();?>
-                        <div class="col-sm project-wrapper project-isotope <?php $categories = wp_get_post_terms( get_the_id(), 'project-category'); foreach ( $categories as $category ){
+                        <div class="col-sm project-wrapper project-isotope <?php $categories = get_the_terms( get_the_id(), 'project-category'); foreach ( $categories as $category ){
                             echo $category->slug;
                         }?>">
                             <div class="project-inner">

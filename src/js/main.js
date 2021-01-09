@@ -7,6 +7,10 @@ import 'swiper/swiper-bundle.css';
 
 jQuery(document).ready(function ($) {
 
+    $(window).load(function(){
+        $('.yabu-loader').fadeOut('slow');
+    });
+
     //Cookie
     if (Cookies.get('yabu') !== 'closed') {
         $('.yabu-cookie').delay(3000).fadeIn();

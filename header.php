@@ -7,6 +7,8 @@
 
 </head>
 <body <?php body_class()?>>
+<!-- Loader -->
+<div class="yabu-loader"></div>
 <!-- Switch Dark Mode -->
 <div class="yabu-theme-switch-wrapper">
     <label class="theme-switch">

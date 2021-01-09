@@ -12,7 +12,7 @@
                     'posts_per_page'    => 3,
                     'orderby'           => 'rand',
                     'order'             => 'ASC'
-                );
+                ); 
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts()) : ?>
                 <div class="row">

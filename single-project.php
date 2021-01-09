@@ -11,6 +11,15 @@
             <div class="row content-project">
                 <div class="col-md project-info">
                     <?php the_content();?>
+                    <span><?php esc_html_e( 'Project type:', 'yabu' );?></span>
+                    <?php 
+                        $categories = get_the_terms( $post->ID, 'project-category');
+                        if ( !empty($categories) && ! is_wp_error( $categories )){
+                            foreach ($categories as $category) {
+                                echo $category->name;
+                            } 
+                        }         
+                    ?>
                     <span><?php esc_html_e('Tech:','yabu');?></span>
                     <?php the_field('tech_project');?>
                     <?php if (get_field('maintenance_project')) : ?>

@@ -12508,7 +12508,10 @@ __webpack_require__.r(__webpack_exports__);
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["Autoplay"]]);
 
 jQuery(document).ready(function ($) {
-  //Cookie
+  $(window).load(function () {
+    $('.yabu-loader').fadeOut('slow');
+  }); //Cookie
+
   if (Cookies.get('yabu') !== 'closed') {
     $('.yabu-cookie').delay(3000).fadeIn();
   }

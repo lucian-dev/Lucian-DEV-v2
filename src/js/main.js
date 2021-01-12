@@ -1,3 +1,4 @@
+// Import Swiper Slider
 import Swiper, { Autoplay, Pagination } from 'swiper';
 
 Swiper.use([Pagination, Autoplay]);

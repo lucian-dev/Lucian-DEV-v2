@@ -8,8 +8,8 @@
             <div class="main-title">
                 <h1><?php the_title();?></h1>
             </div>
-            <div class="row content-project">
-                <div class="col-md project-info">
+            <div class="d-grid project__content">
+                <div class="project__info">
                     <?php the_content();?>
                     <span><?php esc_html_e( 'Project type:', 'yabu' );?></span>
                     <?php 
@@ -34,16 +34,16 @@
                         <a href="<?php the_field('project_url');?>" class="btn" target="_blank"><?php esc_html_e('Visit Website','yabu');?></a>
                     </div>
                 </div>
-                <div class="col-md project-image-wrapper">
+                <div class="project__images-wrapper">
                     <div id="progressbar" data-value="<?php the_field('project_progress');?>">
                         <strong></strong>
                         <span><?php esc_html_e('Project Complete','yabu');?></span>
                     </div>
 	                <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                    <?php the_post_thumbnail( 'large', array('class' => 'img-side'));?>
-                    <div class="side-img-wrapper">
+                    <?php the_post_thumbnail( 'large', array('class' => 'project__image-back'));?>
+                    <div class="project__image-front-wrapper">
                         <img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="">
-                        <div class="side-img-content" style="background-image:url(<?php echo $backgroundImg[0] ; ?>);"></div>
+                        <div class="project__image-front" style="background-image:url(<?php echo $backgroundImg[0] ; ?>);"></div>
                     </div>
                 </div>
             </div>

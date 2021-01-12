@@ -22,13 +22,6 @@
   align-items: center;
 }
 
-.theme-toggle-text {
-  font-size: 13px;
-  line-height: 13px;
-  color: var(--secondary-color);
-  margin-right: 10px;
-}
-
 label.theme-switch {
   position: relative;
   display: inline-block;
@@ -119,19 +112,7 @@ span.line-separator {
   }
 }
 
-// Reusable classes
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.col-md {
-  width: 50%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
+// Reusable classes 
 .col-sm {
   width: 33.33%;
   padding: 15px;
@@ -139,11 +120,12 @@ span.line-separator {
 
 .d-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
   gap: 15px;
 }
 
 .p-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 15px;
 }

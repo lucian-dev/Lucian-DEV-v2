@@ -7,8 +7,8 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="s
   padding: 10px;
   margin-bottom: 20px;
   color: var(--secondary-color);
-  font-size: 14px;
-  line-height: 14px;
+  font-size: $sm-fontSize;
+  line-height: 1;
   font-family: $poppins;
   outline: none;
   transition: all .3s ease-in-out;
@@ -27,8 +27,8 @@ textarea {
 input[type="submit"] {
   display: inline-block;
   font-family: $poppins;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: $l-fontSize;
+  line-height: 1;
   font-weight: bold;
   letter-spacing: 1px;
   padding: 10px 15px;
@@ -119,8 +119,8 @@ div.wpcf7-response-output {
   text-align: center;
   max-width: 95%;
   margin: 10px auto;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 div.wpcf7-validation-errors {
@@ -138,7 +138,7 @@ div.wpcf7-validation-errors {
 .captcha_wrp {
   width: 100%;
   text-align: center;
-  font-size: 13px;
+  font-size: $sm-fontSize;
   margin: 25px 0;
   a {
     color: var(--secondary-color);
@@ -154,7 +154,6 @@ div.wpcf7-validation-errors {
   select,
   input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="submit"]) {
     padding: 10px 20px;
-    font-size: 15px;
     margin-bottom: 10px;
   }
   .form-row {

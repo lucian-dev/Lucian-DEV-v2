@@ -1,37 +1,35 @@
-.content-contact {
+// Contact Page
+.contact {
   position: relative;
-  .col-md {
+  &__content {
+    h5 {
+      margin: 15px auto;
+    }
+    a {
+      display: inline-block;
+      color: var(--secondary-color);
+      transition: all .3s ease-in-out;
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      display: block;
+      fill: var(--secondary-color);
+      transition: all .3s ease-in-out;
+      &:hover {
+        fill: var(--primary-color);
+      }
+    }
+  }
+  &__social,
+  &__email {
+    justify-self: center;
     text-align: center;
   }
-  span.contact-icon {
+  &__icon {
     display: block;
     width: 25px;
     margin: auto;
-    svg {
-      display: block;
-      fill: var(--secondary-color);
-    }
-  }
-  h5 {
-    margin: 15px auto;
-  }
-  a {
-    display: inline-block;
-    color: var(--secondary-color);
-    transition: all .3s ease-in-out;
-  }
-  a:hover {
-    color: var(--primary-color);
-  }
-  svg {
-    width: 25px;
-    height: 25px;
-    display: block;
-    fill: var(--secondary-color);
-    transition: all .3s ease-in-out;
-    &:hover {
-      fill: var(--primary-color);
-    }
   }
 }
 .form-wrapper {

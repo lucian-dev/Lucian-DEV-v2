@@ -51,8 +51,8 @@
     }
     a {
       color: var(--secondary-color);
-      font-size: 13px;
-      line-height: 13px;
+      font-size: $sm-fontSize;
+      line-height: 1;
       transition: all .3s ease-in-out;
     }
     a:hover {
@@ -104,8 +104,8 @@
 }
 
 .copy {
-  font-size: 13px;
-  line-height: 13px;
+  font-size: $sm-fontSize;
+  line-height: 1;
 }
 
 //Cookie
@@ -125,8 +125,7 @@
   border-radius: 5px;
   background-color: var(--background-color);
   box-shadow: 0 5px 15px rgba(0,0,0,.1);
-  font-size: 14px;
-  line-height: 20px;
+  font-size: $sm-fontSize;
   a {
     color: var(--primary-color);
     transition: all .3s ease-in-out;
@@ -150,8 +149,8 @@
     margin-right: 15px;
     display: inline-block;
     font-family: $poppins;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: $sm-fontSize;
+    line-height: 1;
     letter-spacing: 1px;
     border-radius: 5px;
     padding: 8px 15px;

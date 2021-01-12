@@ -1,7 +1,7 @@
 //Tabs projects
 .filter-projects {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   button {
     margin: 5px
   }
@@ -42,8 +42,8 @@
     background-color: $secondaryColorLt;
     padding: 5px 10px;
     color: #FFFFFF;
-    font-size: 13px;
-    line-height: 13px;
+    font-size: $sm-fontSize;
+    line-height: 1;
     font-weight: bold;
     border-bottom-right-radius: 10px;
   }
@@ -59,8 +59,8 @@
   }
   &__info span {
     display: inline-block;
-    font-size: 13px;
-    line-height: 13px;
+    font-size: $sm-fontSize;
+    line-height: 1;
     color: var(--secondary-color);
   }
   &__info span::after {
@@ -79,6 +79,79 @@
   }
 }
 
+// Single Project Page
+.project {
+  .main-title h1:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background-color: var(--secondary-color);
+  }
+  &__content {
+    align-items: center;
+  }
+  &__images-wrapper {
+    position: relative;
+    height: 700px;
+  }
+  &__image-back {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 450px;
+    height: 650px;
+    right: 0;
+    transform: matrix3d(0.90, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(-10px, -50%);
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    z-index: 1;
+  }
+  &__image-front-wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 175px;
+    height: 350px;
+    transform: translate(25px, -50%);
+    z-index: 2;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      box-shadow: -10px 10px 15px 10px rgba(125,125,125, 0.09);
+    }
+  }
+  &__image-front {
+    position: absolute;
+    top: 13px;
+    left: 3px;
+    background-size: 100%;
+    width: 96%;
+    height: 92.5%;
+    border-radius: 10.5px;
+    animation-name: updown;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  &__info {
+    position: relative;
+    span {
+      display: block;
+      font-family: $poppins;
+      font-weight: bold;
+    }
+    span:not(:first-of-type) {
+      margin-top: 15px
+    }
+    .link-project {
+      margin-top: 25px;
+    }
+  }
+}
+
+// Single Project Progress
 #progressbar {
   position: absolute;
   top: 0;
@@ -98,88 +171,18 @@
   }
   strong {
     top: 45px;
-    font-size: 34px;
-    line-height: 34px;
+    font-size: $h2-fontSize;
+    line-height: 1;
   }
   i {
-    font-size: 24px;
+    font-size: $bodySize;
     font-style: normal;
     color: var(--primary-color);
   }
   span {
     bottom: 45px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.2;
     font-weight: bolder;
-  }
-}
-
-.project .main-title h1:before {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 1px;
-  background-color: var(--secondary-color);
-}
-.content-project {
-  position: relative;
-  align-items: center;
-  .project-image-wrapper {
-    position: relative;
-    height: 700px;
-    img.img-side {
-      display: block;
-      position: absolute;
-      top: 50%;
-      width: 450px;
-      height: 650px;
-      right: 0;
-      transform: matrix3d(0.90, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(-10px, -50%);
-      box-shadow: 0 5px 15px rgba(0,0,0,.3);
-      z-index: 1;
-    }
-  }
-  .side-img-wrapper {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 175px;
-    height: 350px;
-    transform: translate(25px, -50%);
-    z-index: 2;
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      box-shadow: -10px 10px 15px 10px rgba(125,125,125, 0.09);
-    }
-  }
-  .side-img-content {
-    position: absolute;
-    top: 13px;
-    left: 3px;
-    background-size: 100%;
-    width: 96%;
-    height: 92.5%;
-    border-radius: 10.5px;
-    animation-name: updown;
-    animation-duration: 10s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-  }
-  .project-info {
-    position: relative;
-    span {
-      display: block;
-      font-family: $poppins;
-      font-weight: bold;
-    }
-    span:not(:first-of-type) {
-      margin-top: 15px
-    }
-    .link-project {
-      margin-top: 25px;
-    }
   }
 }

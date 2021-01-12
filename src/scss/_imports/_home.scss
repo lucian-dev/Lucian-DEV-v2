@@ -1,8 +1,5 @@
 // Home Hero
 .hero {
-  &__content {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  }
   &__info {
     span {
       display: block;
@@ -13,9 +10,8 @@
     }
   }
   &__features {
-    max-width: 400px;
+    justify-self: center;
     padding: 15px;
-    margin: auto;
     border-radius: 10px;
     background-color: var(--background-color);
     box-shadow: var(--box-shadow);

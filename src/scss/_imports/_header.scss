@@ -35,11 +35,11 @@
   text-align: center;
   h3 {
     margin: 10px 0;
-  }
-  span {
-    display: block;
-    color: var(--secondary-color);
-    font-size: 22px;
+    span {
+      display: block;
+      color: var(--secondary-color);
+      font-size: 1.375rem;
+    }
   }
   img {
     display: block;
@@ -133,8 +133,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 12px;
-    line-height: 12px;
+    font-size: $smallest-fontSize;
+    line-height: 1;
     font-family: $poppins;
     opacity: 0;
     transition: all .3s ease-in-out;

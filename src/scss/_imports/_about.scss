@@ -1,7 +1,6 @@
 // About
 .about {
   &__content {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     align-items: center;
   }
   &__info {
@@ -16,9 +15,9 @@
       margin-bottom: 25px;
     }
   }
-  &__skills-wrapper {
-    max-width: 275px;
-    margin: auto;
+  &__skills {
+    justify-self: center;
+    min-width: 275px;
     padding: 15px;
     border-radius: 10px;
     background-color: var(--background-color);
@@ -26,11 +25,6 @@
   }
   &__skill {
     padding: 10px 0;
-    font-family: $poppins;
-    font-size: 22px;
-    line-height: 22px;
-    color: var(--primary-color);
-    font-weight: bold;
   }
   &__skill::before {
     content: "\2713";
@@ -49,15 +43,12 @@
 
 //Features
 .features {
-  &__content {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
   &__wrapper:not(:last-of-type) {
     .features__info a {
       display: none;
     }
   }
-  &__inner {
+  &__wrapper {
     text-align: center;
     padding: 15px;
     border-radius: 10px;

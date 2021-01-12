@@ -16,11 +16,9 @@
                     <?php the_field( 'about_text' );?>
                 </div>
                 <div class="about__skills">
-                    <div class="about__skills-wrapper">
-                        <?php if ( have_rows( 'loop_skill' ) ) : while ( have_rows( 'loop_skill' )) : the_row();?>
-                            <div class="about__skill"><?php the_sub_field( 'skill' );?></div>
-                        <?php endwhile; endif; ?>
-                    </div>
+                    <?php if ( have_rows( 'loop_skill' ) ) : while ( have_rows( 'loop_skill' )) : the_row();?>
+                        <h4 class="about__skill"><?php the_sub_field( 'skill' );?></h4>
+                    <?php endwhile; endif; ?>
                 </div>
             </div>
         </div>
@@ -35,19 +33,17 @@
             <div class="main-title">
                 <h2><?php echo the_field( 'main_title_features' );?></h2>
             </div>
-            <div class="d-grid features__content">
+            <div class="p-grid features__content">
                 <?php if ( have_rows('loop_features') ) : while ( have_rows( 'loop_features' )) : the_row();?>
                 <div class="features__wrapper">
-                    <div class="features__inner">
-                        <div class="features__icon">
-                            <img src="<?php the_sub_field( 'feature_icon' );?>" alt="">
-                        </div>
-                        <div class="features__info">
-                            <h4><?php the_sub_field( 'feature_title' );?></h4>
-                            <p><?php the_sub_field( 'feature_info' );?></p>
-                            <a href="<?php the_sub_field( 'btn_feature' );?>" class="btn"><?php _e( 'Contact Me' );
-                            ?></a>
-                        </div>
+                    <div class="features__icon">
+                        <img src="<?php the_sub_field( 'feature_icon' );?>" alt="">
+                    </div>
+                    <div class="features__info">
+                        <h4><?php the_sub_field( 'feature_title' );?></h4>
+                        <p><?php the_sub_field( 'feature_info' );?></p>
+                        <a href="<?php the_sub_field( 'btn_feature' );?>" class="btn"><?php _e( 'Contact Me' );
+                        ?></a>
                     </div>
                 </div>
                 <?php endwhile; endif; ?>

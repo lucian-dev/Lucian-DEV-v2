@@ -1,3 +1,12 @@
+@keyframes headerIn {
+  from {
+    left: -125px;
+  }
+  to {
+    left: 0;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -78,6 +87,10 @@
   to {
     object-position: bottom;
   }
+}
+
+.headerIn {
+  animation: headerIn 1s forwards;
 }
 
 .onHover {

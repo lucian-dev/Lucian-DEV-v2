@@ -2,7 +2,7 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-<div id="yabu-main" class="section project yabu-scene">
+<section class="section project yabu-scene">
     <div class="display-content scene_element scene_element--fadeinright">
         <div class="container">
             <div class="main-title">
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php endwhile; endif; ?>
 

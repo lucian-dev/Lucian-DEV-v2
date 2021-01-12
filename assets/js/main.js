@@ -12510,6 +12510,7 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 jQuery(document).ready(function ($) {
   $(window).load(function () {
     $('.yabu-loader').fadeOut('slow');
+    $('.main-header').addClass('headerIn');
   }); //Cookie
 
   if (Cookies.get('yabu') !== 'closed') {
@@ -12544,7 +12545,6 @@ jQuery(document).ready(function ($) {
   ; //Switch Dark Mode
 
   var toggleSwitch = document.querySelector('.switch-input');
-  var textBox = document.querySelector('.theme-toggle-text');
 
   function switchTheme(event) {
     if (event.target.checked) {

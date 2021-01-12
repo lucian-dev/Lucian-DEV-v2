@@ -4,7 +4,7 @@
 
 <?php get_header();?>
 
-<div id="yabu-main" class="section projects yabu-scene">
+<section class="section projects yabu-scene">
     <div class="display-content scene_element scene_element--fadeinright">
         <div class="container">
             <div class="main-title text-center">
@@ -35,21 +35,21 @@
             );
             $loop = new WP_Query( $args );
             if ( $loop->have_posts()) : ?>
-                <div class="loop-projects">
+                <div class="rr_projects loop-projects">
                     <?php while ( $loop->have_posts()) : $loop->the_post();?>
-                        <div class="col-sm project-wrapper project-isotope <?php $categories = get_the_terms( get_the_id(), 'project-category'); foreach ( $categories as $category ){
+                        <div class="col-sm project-isotope <?php $categories = get_the_terms( get_the_id(), 'project-category'); foreach ( $categories as $category ){
                             echo $category->slug;
                         }?>">
-                            <div class="project-inner">
-                                <div class="project-image">
+                            <div class="rr_projects__inner">
+                                <div class="rr_projects__image">
                                     <?php if ( get_field('badge_construction')) : ?>
-                                        <span class="project-progress"><?php esc_html_e('Under Construction','yabu');?></span>
+                                        <span class="rr_projects__progress"><?php esc_html_e('Under Construction','yabu');?></span>
                                     <?php endif; ?>
                                     <a href="<?php the_permalink();?>">
                                         <?php the_post_thumbnail('large', array('class' => 'project-th')); ?>
                                     </a>
                                 </div>
-                                <div class="project-info">
+                                <div class="rr_projects__info">
                                     <span>
                                         <?php echo $category->name; ?>
                                     </span>
@@ -63,7 +63,7 @@
 	        <?php wp_reset_postdata() ;?>
         </div>
     </div>
-</div>
+</section>
 
 <span class="line-separator"></span>
 

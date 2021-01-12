@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<div id="yabu-main" class="section blog-post yabu-scene">
+<section class="section blog-post yabu-scene">
     <div class="display-content scene_element scene_element--fadeinright">
         <div class="container">
             <div class="row yabu-blog-content">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <span class="line-separator"></span>
 

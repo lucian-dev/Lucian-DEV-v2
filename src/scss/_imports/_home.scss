@@ -1,14 +1,18 @@
-.hero-content {
-  position: relative;
-  align-items: center;
-  span {
-    display: block;
-    color: var(--secondary-color);
+// Home Hero
+.hero {
+  &__content {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
-  p {
-    margin: 25px 0;
+  &__info {
+    span {
+      display: block;
+      color: var(--secondary-color);
+    }
+    p {
+      margin: 25px 0;
+    }
   }
-  .features-wrapper {
+  &__features {
     max-width: 400px;
     padding: 15px;
     margin: auto;
@@ -19,17 +23,17 @@
       margin-bottom: 25px;
     }
   }
-  .feature {
+  &__feature {
     display: flex;
     align-items: center;
-    h4 {
-      color: var(--secondary-color);
-    }
   }
-  .feature:not(:last-of-type) {
+  &__feature h4 {
+    color: var(--secondary-color);
+  }
+  &__feature:not(:last-of-type) {
     margin-bottom: 15px;
   }
-  .feature-icon {
+  &__feature-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -43,11 +47,11 @@
       transition: all .7s ease-in-out;
     }
   }
-  .feature:hover {
+  &__feature:hover {
     h4 {
       color: var(--primary-color);
     }
-    .feature-icon {
+    .hero__feature-icon {
       background-color: #ffffff;
       img {
         transform: rotate(360deg);

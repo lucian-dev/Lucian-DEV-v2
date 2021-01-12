@@ -1,4 +1,4 @@
-<div id="yabu-main" class="section related-projects yabu-scene">
+<section class="section related-projects yabu-scene">
     <div class="display-content scene_element scene_element--fadeinright">
         <div class="container">
             <div class="main-title">
@@ -15,11 +15,11 @@
                 ); 
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts()) : ?>
-                <div class="row">
+                <div class="p-grid rr_projects">
                     <?php while ( $loop->have_posts()) : $loop->the_post();?>
-                        <div class="col-sm project-wrapper">
-                            <div class="project-inner">
-                                <div class="project-image">
+                        <div class="rr_projects__content">
+                            <div class="rr_projects__inner">
+                                <div class="rr_projects__image">
                                     <?php if ( get_field('badge_construction')) : ?>
                                         <span class="project-progress"><?php esc_html_e('Under Construction','yabu');?></span>
                                     <?php endif; ?>
@@ -27,7 +27,7 @@
                                         <?php the_post_thumbnail('large', array('class' => 'project-th')); ?>
                                     </a>
                                 </div>
-                                <div class="project-info">
+                                <div class="rr_projects__info">
                                     <?php 
                                         $categories = get_the_terms( $post->ID, 'project-category');
                                         if ( !empty($categories) && ! is_wp_error( $categories )){
@@ -50,4 +50,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

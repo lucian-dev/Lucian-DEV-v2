@@ -81,6 +81,7 @@ label.theme-switch {
   transform: translate(26px, -50%);
 }
 
+// Fade Animations
 .yabu-scene {
   .scene_element {
     animation-duration: 0.25s;
@@ -101,12 +102,7 @@ label.theme-switch {
   }
 }
 
-.cover {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
+// Line animation
 span.line-separator {
   position: relative;
   display: block;
@@ -123,6 +119,7 @@ span.line-separator {
   }
 }
 
+// Reusable classes
 .row {
   display: flex;
   justify-content: center;
@@ -138,4 +135,15 @@ span.line-separator {
 .col-sm {
   width: 33.33%;
   padding: 15px;
+}
+
+.d-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.p-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
 }

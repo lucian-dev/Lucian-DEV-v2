@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
 
     $(window).load(function(){
         $('.yabu-loader').fadeOut('slow');
+        $('.main-header').addClass('headerIn');
     });
 
     //Cookie
@@ -38,7 +39,6 @@ jQuery(document).ready(function ($) {
 
     //Switch Dark Mode
     const toggleSwitch = document.querySelector('.switch-input');
-    const textBox = document.querySelector('.theme-toggle-text');
 
     function switchTheme(event) {
         if (event.target.checked) {

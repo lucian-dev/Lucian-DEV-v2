@@ -1,63 +1,70 @@
-// Content About Page
-.content-about {
-  position: relative;
-  align-items: center;
-  .col-md p:not(:last-of-type) {
-    margin-bottom: 25px;
+// About
+.about {
+  &__content {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    align-items: center;
   }
-  .col-md a {
-    color: var(--secondary-color);
-    transition: all .3s ease-in-out;
-    &:hover {
+  &__info {
+    a {
+      color: var(--secondary-color);
+      transition: all .3s ease-in-out;
+    }
+    a:hover {
       color: var(--primary-color);
     }
+    p:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
   }
-  .skill-wrapper {
+  &__skills-wrapper {
     max-width: 275px;
     margin: auto;
     padding: 15px;
     border-radius: 10px;
     background-color: var(--background-color);
     box-shadow: var(--box-shadow);
-    .skill {
-      padding: 10px 0;
-      font-family: $poppins;
-      font-size: 22px;
-      line-height: 22px;
-      color: var(--primary-color);
-      font-weight: bold;
-    }
-    .skill:before {
-      content: "\2713";
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      border-radius: 50px;
-      font-size: 18px;
-      line-height: 26px;
-      text-align: center;
-      color: $primaryColorLt;
-      margin-right: 15px;
-      background-color: #FFFFFF;
-    }
+  }
+  &__skill {
+    padding: 10px 0;
+    font-family: $poppins;
+    font-size: 22px;
+    line-height: 22px;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  &__skill::before {
+    content: "\2713";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: $primaryColorLt;
+    margin-right: 15px;
+    background-color: #FFFFFF;
   }
 }
 
 //Features
-.loop-features {
-  .col-sm:not(:last-of-type) {
-    .feature-info a {
+.features {
+  &__content {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  &__wrapper:not(:last-of-type) {
+    .features__info a {
       display: none;
     }
   }
-  .feature-inner {
+  &__inner {
     text-align: center;
     padding: 15px;
     border-radius: 10px;
     background-color: var(--background-color);
     box-shadow: var(--box-shadow);
   }
-  .icon-feature {
+  &__icon {
     width: 50px;
     height: 50px;
     padding: 5px;
@@ -73,7 +80,7 @@
       height: 35px;
     }
   }
-  .feature-info {
+  &__info {
     padding: 15px 0;
     h4 {
       margin-bottom: 10px;

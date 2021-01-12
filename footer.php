@@ -1,4 +1,4 @@
-<div id="yabu-main" class="section testimonials yabu-scene">
+<section class="section testimonials yabu-scene">
     <div class="display-content scene_element scene_element--fadeinleft">
         <div class="container">
             <div class="main-title">
@@ -30,29 +30,25 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="section footer">
-    <footer class="main-footer">
-        <div class="container">
-            <div class="menu-footer">
-                <?php
-                wp_nav_menu( array(
-                    'theme_location' => 'main-footer',
-                    'link_before'    => '<span>',
-                    'link_after' => '</span>',
-                    'container'=> false,
-                ) );
-                ?>
-            </div>
-
-            <?php do_action('yabu_copy_footer' );?>
-
-        </div>
-    </footer>
-</div>
+</section>
 
 </main><!--END WRAPPER-->
+
+<footer class="section main-footer">
+    <div class="container">
+        <div class="menu-footer">
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'main-footer',
+                'link_before'    => '<span>',
+                'link_after' => '</span>',
+                'container'=> false,
+            ) );
+            ?>
+        </div>
+        <?php do_action('yabu_copy_footer' );?>
+    </div>
+</footer>
 
 <?php get_template_part('content','cookie'); ?>
 

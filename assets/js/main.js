@@ -12618,6 +12618,11 @@ jQuery(document).ready(function ($) {
   });
   $('.project-th').mouseout(function () {
     $(this).removeClass('onHover');
+  }); // 3D Tag Cloud
+
+  var tagsText = ['JavaScript', 'CSS3', 'HTML5', 'WordPress', 'jQuery', 'SASS', 'Gulp', 'Webpack', 'npm', 'Git'];
+  var tagCloud = TagCloud('.about__skills', tagsText, {
+    radius: '200'
   }); //Project Progress
 
   var progressBarr = $('#progressbar').circleProgress({
@@ -12660,8 +12665,8 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/js/main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/scss/main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/js/main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/scss/main.scss */"./src/scss/main.scss");
 
 
 /***/ })

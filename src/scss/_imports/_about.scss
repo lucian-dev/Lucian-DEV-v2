@@ -16,28 +16,12 @@
     }
   }
   &__skills {
+    position: relative;
     justify-self: center;
-    min-width: 275px;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: var(--background-color);
-    box-shadow: var(--box-shadow);
   }
-  &__skill {
-    padding: 10px 0;
-  }
-  &__skill::before {
-    content: "\2713";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    color: $primaryColorLt;
-    margin-right: 15px;
-    background-color: #FFFFFF;
+  .tagcloud--item {
+    color: var(--secondary-color);
+    pointer-events: none;
   }
 }
 

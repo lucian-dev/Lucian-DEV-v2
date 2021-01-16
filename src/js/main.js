@@ -5,7 +5,6 @@ Swiper.use([Pagination, Autoplay]);
 
 import 'swiper/swiper-bundle.css';
 
-
 jQuery(document).ready(function ($) {
 
     $(window).load(function(){
@@ -40,7 +39,6 @@ jQuery(document).ready(function ($) {
 
     //Switch Dark Mode
     const toggleSwitch = document.querySelector('.switch-input');
-
     function switchTheme(event) {
         if (event.target.checked) {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -111,6 +109,17 @@ jQuery(document).ready(function ($) {
     });
     $('.project-th').mouseout (function(){
         $(this).removeClass('onHover');
+    });
+
+    // 3D Tag Cloud
+    const tagsText = [
+        'JavaScript', 'CSS3', 'HTML5',
+        'WordPress', 'jQuery', 'SASS',
+        'Gulp', 'Webpack', 'npm', 'Git',
+    ];
+
+    let tagCloud = TagCloud('.about__skills', tagsText, {
+        radius: '200',
     });
 
     //Project Progress

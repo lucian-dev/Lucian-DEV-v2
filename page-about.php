@@ -15,11 +15,7 @@
                 <div class="about__info">
                     <?php the_field( 'about_text' );?>
                 </div>
-                <div class="about__skills">
-                    <?php if ( have_rows( 'loop_skill' ) ) : while ( have_rows( 'loop_skill' )) : the_row();?>
-                        <h4 class="about__skill"><?php the_sub_field( 'skill' );?></h4>
-                    <?php endwhile; endif; ?>
-                </div>
+                <div class="about__skills"></div>
             </div>
         </div>
     </div>

@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Muli|Poppins:400,700&display=swap);@charset "UTF-8";
-:root {
+@import url(https://fonts.googleapis.com/css?family=Muli|Poppins:400,700&display=swap);:root {
   --background-color: #f1f3f6;
   --base-color: #6c757d;
   --primary-color: #343a40;
@@ -1137,28 +1136,12 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   margin-bottom: 25px;
 }
 .about__skills {
+  position: relative;
   justify-self: center;
-  min-width: 275px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: var(--background-color);
-  box-shadow: var(--box-shadow);
 }
-.about__skill {
-  padding: 10px 0;
-}
-.about__skill::before {
-  content: "\2713";
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  color: #343a40;
-  margin-right: 15px;
-  background-color: #FFFFFF;
+.about .tagcloud--item {
+  color: var(--secondary-color);
+  pointer-events: none;
 }
 
 .features__wrapper:not(:last-of-type) .features__info a {

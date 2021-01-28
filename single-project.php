@@ -31,7 +31,7 @@
                         <?php the_field('collab');?>
                     <?php endif; ?>
                     <div class="link-project">
-                        <a href="<?php the_field('project_url');?>" class="btn" target="_blank"><?php esc_html_e('Visit Website','yabu');?></a>
+                        <a href="<?php the_field('project_url');?>" class="btn" target="_blank" rel="noreferrer"><?php esc_html_e('Visit Website','yabu');?></a>
                     </div>
                 </div>
                 <div class="project__images-wrapper">

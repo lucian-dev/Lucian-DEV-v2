@@ -63,24 +63,40 @@ function ya_widgets() {
 }
 add_action( 'widgets_init', 'ya_widgets' );
 
-//Register Custom Post Type
-function register_projects_yabu(){
-    register_post_type( 'project', array(
-        'labels' => array(
-            'name' => __( 'Projects' ),
-            'singular_name' => __( 'Project' )
-        ),
-        'public'             => true,
-        'publicly_queryable' => true,
-        'query_var'          => true,
-        'rewrite'            => true,
-        'hierarchical'       => false,    
-        'menu_icon'          => 'dashicons-sos',
-        'supports'           => array( 'title','editor','thumbnail' )
-    ));
+// Register Custom Post Type
+function register_projects_yabu() {
+    $labels = array(
+        'name'                  => _x( 'Projects', 'yabu' ),
+        'singular_name'         => _x( 'Project', 'yabu' ),
+        'menu_name'             => _x( 'Projects', 'yabu' ),
+        'add_new'               => __( 'Add Project', 'yabu' ),
+        'add_new_item'          => __( 'Add New Project', 'yabu' ),
+        'new_item'              => __( 'New Project', 'yabu' ),
+        'edit_item'             => __( 'Edit Project', 'yabu' ),
+        'view_item'             => __( 'View Project', 'yabu' ),
+        'all_items'             => __( 'All Projects', 'yabu' ),
+        'search_items'          => __( 'Search Books', 'yabu' ),
+        'parent_item_colon'     => __( 'Parent Books:', 'yabu' ),
+        'not_found'             => __( 'No projects found.', 'yabu' ),
+        'not_found_in_trash'    => __( 'No projects found in Trash.', 'yabu' ),  
+    );
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'rewrite'               => array( 'slug' => 'project'),
+        'hierarchical'          => false,
+        'show_in_graphql'       => true,
+        'graphql_single_name'   => 'project',
+        'graphql_plural_name'   => 'projects',
+        'menu_icon'             => 'dashicons-sos',
+        'supports'              => array( 'title','editor','thumbnail' )
+    );
+    register_post_type( 'project', $args );
 }
 add_action( 'init','register_projects_yabu' );
 
+//Register Taxonomy
 function custom_taxonomy_yabu() {
 
     //Project Categories Taxonomy
@@ -92,11 +108,14 @@ function custom_taxonomy_yabu() {
     );
 
     $args = array(
-        'hierarchical'          => true,
+        'hierarchical'          => false,
         'labels'                => $labels,
         'query_var'             => true,
         'show_ui'               => true,
         'show_admin_column'     => true,
+        'show_in_graphql'       => true,
+        'graphql_single_name'   => 'projectCategory',
+        'graphql_plural_name'   => 'projectCategories',
         'rewrite'               => array( 'slug'=>'category' ),
     );
     register_taxonomy( 'project-category', 'project', $args );
@@ -121,6 +140,9 @@ function custom_taxonomy_yabu() {
         'show_admin_column'     => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var'             => true,
+        'show_in_graphql'       => true,
+        'graphql_single_name'   => 'projectTag',
+        'graphql_plural_name'   => 'projectTags',
         'rewrite'               => array('slug' => 'tag'),
     );
 
@@ -128,18 +150,3 @@ function custom_taxonomy_yabu() {
 
 }
 add_action( 'init', 'custom_taxonomy_yabu');
-
-//Google Analytics
-function yabu_google_analytics(){ ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133481509-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-133481509-2');
-    </script>
-    <?php
-}
-add_action ('wp_head','yabu_google_analytics', 10);

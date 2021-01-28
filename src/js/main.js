@@ -111,7 +111,7 @@ jQuery(document).ready(function ($) {
         $(this).removeClass('onHover');
     });
 
-    // 3D Tag Cloud
+    // Tag Cloud
     const tagsText = [
         'JavaScript', 'CSS3', 'HTML5',
         'WordPress', 'jQuery', 'SASS',
@@ -119,7 +119,8 @@ jQuery(document).ready(function ($) {
     ];
 
     let tagCloud = TagCloud('.about__skills', tagsText, {
-        radius: '200',
+        radius: '250',
+        maxSpeed: 'slow',
     });
 
     //Project Progress

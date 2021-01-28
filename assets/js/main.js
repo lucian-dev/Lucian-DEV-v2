@@ -12618,11 +12618,12 @@ jQuery(document).ready(function ($) {
   });
   $('.project-th').mouseout(function () {
     $(this).removeClass('onHover');
-  }); // 3D Tag Cloud
+  }); // Tag Cloud
 
   var tagsText = ['JavaScript', 'CSS3', 'HTML5', 'WordPress', 'jQuery', 'SASS', 'Gulp', 'Webpack', 'npm', 'Git'];
   var tagCloud = TagCloud('.about__skills', tagsText, {
-    radius: '200'
+    radius: '250',
+    maxSpeed: 'slow'
   }); //Project Progress
 
   var progressBarr = $('#progressbar').circleProgress({

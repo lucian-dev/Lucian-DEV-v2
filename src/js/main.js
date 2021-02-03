@@ -78,6 +78,27 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    // Tag Cloud
+    const tagsText = [
+        'JavaScript', 'CSS3', 'HTML5',
+        'WordPress', 'jQuery', 'SASS',
+        'Gulp', 'Webpack', 'npm', 'Git',
+        'WooCommerce', 'Responsive Design',
+    ];
+
+    let tagCloud = TagCloud('.about__skills', tagsText, {
+        radius: '250',
+        maxSpeed: 'slow',
+    });
+
+    // Project Thumbnail Animation
+    $('.project-th').mouseover (function(){
+        $(this).addClass('onHover');
+    });
+    $('.project-th').mouseout (function(){
+        $(this).removeClass('onHover');
+    });
+
     //Project Filter-Isotope
     var $grid = $('.loop-projects');
     $grid.isotope({
@@ -101,26 +122,6 @@ jQuery(document).ready(function ($) {
             $buttonGroup.find('.is-checked').removeClass('is-checked');
             $(this).addClass('is-checked');
         });
-    });
-
-    // Project Thumbnail Animation
-    $('.project-th').mouseover (function(){
-        $(this).addClass('onHover');
-    });
-    $('.project-th').mouseout (function(){
-        $(this).removeClass('onHover');
-    });
-
-    // Tag Cloud
-    const tagsText = [
-        'JavaScript', 'CSS3', 'HTML5',
-        'WordPress', 'jQuery', 'SASS',
-        'Gulp', 'Webpack', 'npm', 'Git',
-    ];
-
-    let tagCloud = TagCloud('.about__skills', tagsText, {
-        radius: '250',
-        maxSpeed: 'slow',
     });
 
     //Project Progress

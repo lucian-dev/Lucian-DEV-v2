@@ -22,10 +22,8 @@
                     ?>
                     <span><?php esc_html_e('Tech:','yabu');?></span>
                     <?php the_field('tech_project');?>
-                    <?php if (get_field('maintenance_project')) : ?>
-                        <span><?php esc_html_e('Maintenance:','yabu');?></span>
-                        <?php the_field('maintenance');?>
-                    <?php endif; ?>
+                    <span><?php esc_html_e('Maintenance:','yabu');?></span>
+                    <?php the_field('maintenance');?>
                     <?php if (get_field('collab_project')) : ?>
                         <span><?php esc_html_e('Collab:','yabu');?></span>
                         <?php the_field('collab');?>

@@ -15,7 +15,9 @@
               <div class="working__code-wrapper">
                 <p>.pawan-studio {</p>
                   <div class="working__typed">
-                    <span id="typed"></span>
+                    <span>display: flex;</span>
+                    <span>align-items: center;</span>
+                    <span>justify-content: center;</span>
                   </div>
                 <p>}</p>
               </div>
@@ -40,3 +42,7 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+  
+</script>

@@ -1,9 +1,8 @@
 // About Page
 .about {
-  &__content {
-    align-items: center;
-  }
   &__info {
+    column-count: 2;
+    column-gap: 35px;
     a {
       color: var(--secondary-color);
       transition: all 0.3s ease-in-out;
@@ -14,18 +13,10 @@
     p:not(:last-of-type) {
       margin-bottom: 25px;
     }
-  }
-  &__skills {
-    display: none;
-    position: relative;
-    justify-self: center;
-    @media (min-width: 768px) {
-      display: block;
+    @media (max-width: 768px) {
+      column-count: 1;
+      column-gap: 25px;
     }
-  }
-  .tagcloud--item {
-    color: var(--secondary-color);
-    pointer-events: none;
   }
 }
 

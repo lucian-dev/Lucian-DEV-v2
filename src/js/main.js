@@ -1,6 +1,5 @@
 // Import Swiper Slider
 import Swiper, { Autoplay, Pagination } from 'swiper';
-import Typed from 'typed.js';
 
 Swiper.use([Pagination, Autoplay]);
 
@@ -58,16 +57,6 @@ jQuery(document).ready(function ($) {
         }
     };
 
-    // Typed Strings
-    let typed = new Typed("#typed", {
-        strings: ["display: flex;\nalign-items: center;\njustify-content: center;"],
-        loop: true,
-        loopCount: 5,
-        typeSpeed: 160,
-        backSpeed: 180,
-        fadeOut: true,
-    });
-
     // Slider Testimonials
     var slideTestimonials = new Swiper('.swiper-container', {
         autoplay: {
@@ -85,19 +74,6 @@ jQuery(document).ready(function ($) {
                 slidesPerView: 2
             }
         }
-    });
-
-    // Tag Cloud
-    const tagsText = [
-        'JavaScript', 'CSS3', 'HTML5',
-        'WordPress', 'jQuery', 'SASS',
-        'Gulp', 'Webpack', 'npm', 'Git',
-        'WooCommerce', 'Responsive Design',
-    ];
-
-    let tagCloud = TagCloud('.about__skills', tagsText, {
-        radius: '250',
-        maxSpeed: 'slow',
     });
 
     // Project Thumbnail Animation

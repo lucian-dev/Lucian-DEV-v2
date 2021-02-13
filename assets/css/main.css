@@ -1186,9 +1186,7 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 .working__code-wrapper {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  color: var(--secondary-color);
   font-size: 1.375rem;
-  min-height: 175px;
 }
 .working__code-wrapper p {
   color: var(--primary-color);
@@ -1196,10 +1194,9 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 .working__typed {
   padding-left: 25px;
 }
-@media (max-width: 400px) {
-  .working__typed {
-    padding-left: 15px;
-  }
+.working__typed span {
+  display: block;
+  color: var(--secondary-color);
 }
 .working__image-wrapper {
   position: relative;
@@ -1233,12 +1230,11 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-#typed {
-  white-space: pre;
-}
-
-.about__content {
-  align-items: center;
+.about__info {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
 }
 .about__info a {
   color: var(--secondary-color);
@@ -1250,19 +1246,13 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 .about__info p:not(:last-of-type) {
   margin-bottom: 25px;
 }
-.about__skills {
-  display: none;
-  position: relative;
-  justify-self: center;
-}
-@media (min-width: 768px) {
-  .about__skills {
-    display: block;
+@media (max-width: 768px) {
+  .about__info {
+    -moz-column-count: 1;
+         column-count: 1;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
   }
-}
-.about .tagcloud--item {
-  color: var(--secondary-color);
-  pointer-events: none;
 }
 
 .features__wrapper:not(:last-of-type) .features__info a {

@@ -11,11 +11,10 @@
                 <h1><?php echo get_field( 'main_title_about' )[ 'title' ];?></h1>
                 <p><?php echo get_field( 'main_title_about' )[ 'sub_title' ];?></p>
             </div>
-            <div class="d-grid about__content">
+            <div class="about__content">
                 <div class="about__info">
                     <?php the_field( 'about_text' );?>
                 </div>
-                <div class="about__skills"></div>
             </div>
         </div>
     </div>

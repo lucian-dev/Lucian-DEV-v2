@@ -85,17 +85,16 @@
   &__code-wrapper {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    color: var(--secondary-color);
     font-size: $h4-fontSize;
-    min-height: 175px;
     p {
       color: var(--primary-color);
     }
   }
   &__typed {
     padding-left: 25px;
-    @media (max-width: 400px) {
-      padding-left: 15px;
+    span {
+      display: block;
+      color: var(--secondary-color);
     }
   }
   &__image-wrapper {
@@ -141,8 +140,4 @@
     top: -25px;
     background-color: rgba(255, 255, 255, 0.7);
   }
-}
-
-#typed {
-  white-space: pre;
 }

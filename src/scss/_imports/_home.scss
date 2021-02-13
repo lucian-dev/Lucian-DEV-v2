@@ -37,10 +37,10 @@
     background-color: #f1f3f6;
     box-shadow: var(--box-shadow);
     margin-right: 15px;
-    transition: all .7s ease-in-out;
+    transition: all 0.7s ease-in-out;
     img {
       display: block;
-      transition: all .7s ease-in-out;
+      transition: all 0.7s ease-in-out;
     }
   }
   &__feature:hover {
@@ -54,4 +54,95 @@
       }
     }
   }
+}
+
+// Working
+.working {
+  .bullets-anim {
+    i {
+      display: inline-block;
+      width: 6.5px;
+      height: 6.5px;
+      border-radius: 50%;
+      animation: loopBullets;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-duration: 4s;
+    }
+    i:first-of-type {
+      animation-delay: 2s;
+    }
+    i:nth-child(2) {
+      animation-delay: 3s;
+    }
+    i:last-of-type {
+      animation-delay: 4s;
+    }
+  }
+  &__content {
+    align-items: center;
+  }
+  &__code-wrapper {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: $h4-fontSize;
+    min-height: 175px;
+    p {
+      color: var(--primary-color);
+    }
+  }
+  &__typed {
+    padding-left: 25px;
+    @media (max-width: 400px) {
+      padding-left: 15px;
+    }
+  }
+  &__image-wrapper {
+    position: relative;
+    justify-self: center;
+  }
+  &__image {
+    max-width: 450px;
+    height: 450px;
+    transform: matrix3d(
+      0.9,
+      0.12,
+      0.34,
+      -0.0002,
+      0,
+      1,
+      0,
+      0,
+      -0.34,
+      0,
+      0.94,
+      0,
+      1,
+      0,
+      10,
+      1
+    );
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      animation: updownTh 15s both infinite;
+    }
+    @media (max-width: 400px) {
+      transform: none;
+    }
+  }
+  #progressbar {
+    left: -50px;
+    top: -25px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+#typed {
+  white-space: pre;
 }

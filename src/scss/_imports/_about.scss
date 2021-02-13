@@ -6,7 +6,7 @@
   &__info {
     a {
       color: var(--secondary-color);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     a:hover {
       color: var(--primary-color);
@@ -16,8 +16,12 @@
     }
   }
   &__skills {
+    display: none;
     position: relative;
     justify-self: center;
+    @media (min-width: 768px) {
+      display: block;
+    }
   }
   .tagcloud--item {
     color: var(--secondary-color);

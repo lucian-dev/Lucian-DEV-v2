@@ -1,9 +1,8 @@
 // Import Swiper Slider
 import Swiper, { Autoplay, Pagination } from 'swiper';
+import Typed from 'typed.js';
 
 Swiper.use([Pagination, Autoplay]);
-
-import 'swiper/swiper-bundle.css';
 
 jQuery(document).ready(function ($) {
 
@@ -58,6 +57,16 @@ jQuery(document).ready(function ($) {
             toggleSwitch.checked = true;
         }
     };
+
+    // Typed Strings
+    let typed = new Typed("#typed", {
+        strings: ["display: flex;\nalign-items: center;\njustify-content: center;"],
+        loop: true,
+        loopCount: 5,
+        typeSpeed: 160,
+        backSpeed: 180,
+        fadeOut: true,
+    });
 
     // Slider Testimonials
     var slideTestimonials = new Swiper('.swiper-container', {

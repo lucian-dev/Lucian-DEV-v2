@@ -49,6 +49,10 @@ show_admin_bar(false);
 //Yabu
 require_once "inc/yabu.php";
 
+require_once "inc/remove-header.php";
+
+require_once "inc/remove-emoji.php";
+
 //Register Sidebar
 function ya_widgets() {
     register_sidebar( [

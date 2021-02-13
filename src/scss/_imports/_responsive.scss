@@ -3,8 +3,8 @@
     padding-left: 0;
   }
   .main-header {
-    transform: translate3d( -125px, 0, 0);
-    transition: all .3s ease-in-out;
+    transform: translate3d(-125px, 0, 0);
+    transition: all 0.3s ease-in-out;
     .smartphone-menu-trigger {
       position: absolute;
       left: 110%;
@@ -14,7 +14,8 @@
       border-radius: 10px;
       background-color: var(--secondary-color);
       cursor: pointer;
-      &:before, &:after {
+      &:before,
+      &:after {
         content: '';
         width: 50%;
         height: 2px;
@@ -35,8 +36,8 @@
     }
   }
   .main-header:focus {
-    box-shadow: 0 0 0 100em rgba(0,0,0,0.8);
-    transform: translate3d(0,0,0);
+    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.8);
+    transform: translate3d(0, 0, 0);
     .smartphone-menu-trigger {
       pointer-events: none;
       &:before {

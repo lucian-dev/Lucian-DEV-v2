@@ -23,7 +23,7 @@
                         <?php endwhile; ?>
                     </div>
                     <div class="posts-navigation">
-                        <?php posts_nav_link(' . ','...Go previous page','Go next page...'); ?>
+                        <?php posts_nav_link(' . ','...Go previous page','Go next page..'); ?>
                     </div>
                 <?php endif; ?>
             </div>

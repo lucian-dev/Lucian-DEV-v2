@@ -58,7 +58,7 @@ label.theme-switch {
 }
 
 .slider-switch::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -77,7 +77,7 @@ label.theme-switch {
 // Fade Animations
 .yabu-scene {
   .scene_element {
-    animation-duration: 0.25s;
+    animation-duration: 1s;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
   }
@@ -100,7 +100,7 @@ span.line-separator {
   position: relative;
   display: block;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -112,7 +112,7 @@ span.line-separator {
   }
 }
 
-// Reusable classes 
+// Reusable classes
 .col-sm {
   width: 33.33%;
   padding: 15px;

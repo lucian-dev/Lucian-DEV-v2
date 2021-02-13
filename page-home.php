@@ -31,6 +31,10 @@
 
 <span class="line-separator"></span>
 
+<?php get_template_part( 'content','working' ); ?>
+
+<span class="line-separator"></span>
+
 <?php get_template_part( 'content','recent-projects' ); ?>
 
 <span class="line-separator"></span>

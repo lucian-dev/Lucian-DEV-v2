@@ -1191,12 +1191,21 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 .working__code-wrapper p {
   color: var(--primary-color);
 }
+@media (max-width: 900px) {
+  .working__code-wrapper {
+    margin-bottom: 50px;
+  }
+}
 .working__typed {
   padding-left: 25px;
 }
-.working__typed span {
-  display: block;
-  color: var(--secondary-color);
+@media (max-width: 900px) {
+  .working__typed {
+    min-height: 100px;
+  }
+}
+.working #typed {
+  white-space: pre;
 }
 .working__image-wrapper {
   position: relative;

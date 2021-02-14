@@ -57,6 +57,16 @@ jQuery(document).ready(function ($) {
         }
     };
 
+    // Typed Animation
+    $('#typed').typed({
+        strings: ["display: flex;\nalign-items: center;\njustify-content: center;"],
+        typeSpeed: 100,
+        backSpeed: 120,
+        backDelay: 80,
+        loop: true,
+        fadeOut: true
+    });
+
     // Slider Testimonials
     var slideTestimonials = new Swiper('.swiper-container', {
         autoplay: {

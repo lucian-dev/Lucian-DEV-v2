@@ -11921,7 +11921,16 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  ; // Slider Testimonials
+  ; // Typed Animation
+
+  $('#typed').typed({
+    strings: ["display: flex;\nalign-items: center;\njustify-content: center;"],
+    typeSpeed: 100,
+    backSpeed: 120,
+    backDelay: 80,
+    loop: true,
+    fadeOut: true
+  }); // Slider Testimonials
 
   var slideTestimonials = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
     autoplay: {

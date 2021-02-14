@@ -89,13 +89,18 @@
     p {
       color: var(--primary-color);
     }
+    @media (max-width: 900px) {
+      margin-bottom: 50px;
+    }
   }
   &__typed {
     padding-left: 25px;
-    span {
-      display: block;
-      color: var(--secondary-color);
+    @media (max-width: 900px) {
+      min-height: 100px;
     }
+  }
+  #typed {
+    white-space: pre;
   }
   &__image-wrapper {
     position: relative;

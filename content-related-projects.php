@@ -21,7 +21,7 @@
                             <div class="rr_projects__inner">
                                 <div class="rr_projects__image">
                                     <?php if ( get_field('badge_construction')) : ?>
-                                        <span class="project-progress"><?php esc_html_e('Under Construction','yabu');?></span>
+                                        <span class="rr_projects__progress"><?php esc_html_e('Under Construction','yabu');?></span>
                                     <?php endif; ?>
                                     <a href="<?php the_permalink();?>">
                                         <?php the_post_thumbnail('large', array('class' => 'project-th')); ?>

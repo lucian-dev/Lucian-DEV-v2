@@ -12021,8 +12021,8 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/js/main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! /Users/luciandev/Desktop/Projects_Dev/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/scss/main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! /Users/lucian-dev/Desktop/Projects-DEV/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/js/main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! /Users/lucian-dev/Desktop/Projects-DEV/Lucian-DEV/lucian-dev-v2/wp-content/themes/Lucian-DEV-v2/src/scss/main.scss */"./src/scss/main.scss");
 
 
 /***/ })

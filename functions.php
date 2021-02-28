@@ -91,9 +91,6 @@ function register_projects_yabu() {
         'rewrite'               => array( 'slug' => 'project'),
         'hierarchical'          => false,
         'show_in_rest'          => true,
-        'show_in_graphql'       => true,
-        'graphql_single_name'   => 'project',
-        'graphql_plural_name'   => 'projects',
         'menu_icon'             => 'dashicons-sos',
         'supports'              => array( 'title','editor','thumbnail' )
     );
@@ -119,9 +116,6 @@ function custom_taxonomy_yabu() {
         'show_ui'               => true,
         'show_admin_column'     => true,
         'show_in_rest'          => true,
-        'show_in_graphql'       => true,
-        'graphql_single_name'   => 'projectCategory',
-        'graphql_plural_name'   => 'projectCategories',
         'rewrite'               => array( 'slug'=>'category' ),
     );
     register_taxonomy( 'project-category', 'project', $args );
@@ -146,9 +140,6 @@ function custom_taxonomy_yabu() {
         'show_admin_column'     => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var'             => true,
-        'show_in_graphql'       => true,
-        'graphql_single_name'   => 'projectTag',
-        'graphql_plural_name'   => 'projectTags',
         'rewrite'               => array('slug' => 'tag'),
     );
 

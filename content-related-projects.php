@@ -44,7 +44,7 @@
             <?php endif; ?>
             <?php wp_reset_postdata() ;?>
             <div class="btn-bottom text-center">
-                <a href="<?php the_field('projects_btn','option');?>" class="btn transition"><?php esc_html_e('more','yabu');?></a>
+                <a href="<?php the_field('projects_btn','option');?>" class="btn"><?php esc_html_e('more','yabu');?></a>
             </div>
         </div>
     </div>

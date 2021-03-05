@@ -43,82 +43,6 @@
     left: 0;
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
 @-webkit-keyframes loop-line {
   from {
     left: 150px;
@@ -214,34 +138,13 @@
   }
 }
 .headerIn {
-  -webkit-animation: headerIn 1s forwards;
-          animation: headerIn 1s forwards;
+  -webkit-animation: headerIn 1.3s forwards;
+          animation: headerIn 1.3s forwards;
 }
 
 .onHover {
   -webkit-animation: updownTh 10s both infinite;
           animation: updownTh 10s both infinite;
-}
-
-/**** Isotope CSS3 transitions ****/
-.isotope,
-.isotope .isotope-item {
-  transition-duration: 0.8s;
-}
-
-.isotope {
-  transition-property: height;
-}
-
-.isotope .isotope-item {
-  transition-property: transform, opacity;
-}
-
-/**** disabling Isotope CSS3 transitions ****/
-.isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
-  transition-duration: 0s;
 }
 
 *,
@@ -259,7 +162,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   font-family: "Muli", sans-serif;
   font-weight: normal;
   font-size: 1.125rem;
@@ -508,30 +411,6 @@ label.theme-switch {
   transform: translate(26px, -50%);
 }
 
-.yabu-scene .scene_element {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  transition-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-.yabu-scene .scene_element--fadein {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
-}
-.yabu-scene .scene_element--fadeinup {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-}
-.yabu-scene .scene_element--fadeinright {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
-}
-.yabu-scene .scene_element--fadeinleft {
-  -webkit-animation-name: fadeInLeft;
-          animation-name: fadeInLeft;
-}
-
 span.line-separator {
   position: relative;
   display: block;
@@ -547,6 +426,7 @@ span.line-separator:after {
   background-color: var(--secondary-color);
   -webkit-animation: loop-line 25s linear 2s infinite alternate;
           animation: loop-line 25s linear 2s infinite alternate;
+  z-index: 2;
 }
 
 .col-sm {
@@ -1272,50 +1152,6 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   }
 }
 
-.features__wrapper:not(:last-of-type) .features__info a {
-  display: none;
-}
-.features__wrapper {
-  text-align: center;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: var(--background-color);
-  box-shadow: var(--box-shadow);
-}
-.features__icon {
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  border-radius: 50%;
-  background-color: #f1f3f6;
-  box-shadow: inset 3px 3px 3px #dadada, inset -3px -3px 3px #fafafa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -25px auto 0;
-}
-.features__icon img {
-  width: 35px;
-  height: 35px;
-}
-.features__info {
-  padding: 15px 0;
-}
-.features__info h4 {
-  margin-bottom: 10px;
-}
-.features__info a {
-  margin-top: 15px;
-}
-
-.filter-projects {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.filter-projects button {
-  margin: 5px;
-}
-
 .rr_projects {
   position: relative;
 }
@@ -1387,6 +1223,12 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 }
 .rr_projects__inner:hover .rr_projects__info a {
   color: var(--secondary-color);
+}
+
+@media (min-width: 992px) {
+  .loop-projects .rr_projects__content:nth-child(5n+2) {
+    grid-column: 2/4;
+  }
 }
 
 .project .main-title h1:before {

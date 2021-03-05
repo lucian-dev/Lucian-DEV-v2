@@ -1,7 +1,7 @@
 <?php get_header();?>
 
-<section class="section blog-post yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinright">
+<section class="section blog-post">
+    <div class="display-content">
         <div class="container">
             <div class="row yabu-blog-content">
                 <?php if ( have_posts(  )) : while ( have_posts(  )) : the_post(); ?>

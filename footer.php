@@ -1,8 +1,8 @@
-<section class="section testimonials yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinleft">
+<section class="section testimonials">
+    <div class="display-content">
         <div class="container">
             <div class="main-title">
-                <h2><?php esc_html_e('Clients ','yabu');?><span><?php esc_html_e('say...','yabu');?></span></h2>
+                <h2><?php esc_html_e('They ','yabu');?><span><?php esc_html_e('say...','yabu');?></span></h2>
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper loop-testimonials">

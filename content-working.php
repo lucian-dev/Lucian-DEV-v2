@@ -1,5 +1,5 @@
-<section class="section working yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinleft">
+<section class="section working">
+    <div class="display-content">
         <div class="container">
             <div class="main-title">
               <h2><?php esc_html_e('Working ','yabu');?>

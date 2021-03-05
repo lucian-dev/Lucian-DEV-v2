@@ -58,7 +58,7 @@ label.theme-switch {
 }
 
 .slider-switch::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -74,33 +74,12 @@ label.theme-switch {
   transform: translate(26px, -50%);
 }
 
-// Fade Animations
-.yabu-scene {
-  .scene_element {
-    animation-duration: 1s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-  .scene_element--fadein {
-    animation-name: fadeIn;
-  }
-  .scene_element--fadeinup {
-    animation-name: fadeInUp;
-  }
-  .scene_element--fadeinright {
-    animation-name: fadeInRight;
-  }
-  .scene_element--fadeinleft {
-    animation-name: fadeInLeft;
-  }
-}
-
 // Line animation
 span.line-separator {
   position: relative;
   display: block;
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -109,6 +88,7 @@ span.line-separator {
     height: 1px;
     background-color: var(--secondary-color);
     animation: loop-line 25s linear 2s infinite alternate;
+    z-index: 2;
   }
 }
 

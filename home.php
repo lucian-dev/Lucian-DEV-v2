@@ -1,7 +1,7 @@
 <?php get_header();?>
 
-<section class="section blog yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinright">
+<section class="section blog">
+    <div class="display-content">
         <div class="container">
             <div class="main-title text-center">
                 <h1><?php single_post_title(); ?></h1>

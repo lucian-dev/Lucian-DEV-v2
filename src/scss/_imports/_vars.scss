@@ -1,6 +1,6 @@
 //Fonts
-$poppins: 'Poppins', sans-serif;
-$muli: 'Muli', sans-serif;
+$poppins: "Poppins", sans-serif;
+$muli: "Muli", sans-serif;
 
 // Font Size
 $bodySize: 1.125rem;
@@ -17,14 +17,14 @@ $backgroundColorLt: #f1f3f6;
 $baseColorLt: #6c757d;
 $primaryColorLt: #343a40;
 $secondaryColorLt: #5f5f5f;
-$boxShadow: 0 5px 15px rgba(0,0,0,.1);
+$boxShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
 //Colors for Dark Mode
 $backgroundColorDt: #343a40;
 $baseColorDt: #ffffff;
 $primaryColorDt: #ffffff;
 $secondaryColorDt: #d6d6d6;
-$boxShadowDt: 2px 0px 5px rgba(200, 200, 200, .5);
+$boxShadowDt: 2px 0px 5px rgba(200, 200, 200, 0.5);
 
 :root {
   --background-color: #{$backgroundColorLt};

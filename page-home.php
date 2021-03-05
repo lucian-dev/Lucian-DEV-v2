@@ -4,8 +4,8 @@
 
 <?php get_header();?>
 
-<section class="section hero yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinright">
+<section class="section hero">
+    <div class="display-content yabu-scene">
         <div class="container">
             <div class="d-grid hero__content">
                 <div class="hero__info">

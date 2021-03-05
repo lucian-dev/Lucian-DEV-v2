@@ -1,13 +1,21 @@
 // Import Swiper Slider
-import Swiper, { Autoplay, Pagination } from 'swiper';
+import Swiper from "swiper/bundle";
 
-Swiper.use([Pagination, Autoplay]);
+// Import GSAP
+import gsap from "gsap";
 
 jQuery(document).ready(function ($) {
 
     $(window).load(function(){
+
         $('.yabu-loader').fadeOut('slow');
         $('.main-header').addClass('headerIn');
+
+        gsap.from(".yabu-scene", {
+            x: "100%",
+            duration: 1.1,
+            ease: "power1.inOut"
+        });
     });
 
     //Cookie
@@ -92,31 +100,6 @@ jQuery(document).ready(function ($) {
     });
     $('.project-th').mouseout (function(){
         $(this).removeClass('onHover');
-    });
-
-    //Project Filter-Isotope
-    var $grid = $('.loop-projects');
-    $grid.isotope({
-        itemSelector: '.project-isotope',
-        layoutMode: 'fitRows',
-        percentPosition: true,
-        masonry: {
-            isFitWidth: true,
-            isAnimated: true
-        }
-    });
-
-    $('.filter-btn-group').on('click', 'button', function(){
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({filter: filterValue});
-    });
-
-    $('.filter-projects').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on('click', 'button', function(){
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $(this).addClass('is-checked');
-        });
     });
 
     //Project Progress

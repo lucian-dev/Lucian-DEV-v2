@@ -2,8 +2,8 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-<section class="section project yabu-scene">
-    <div class="display-content scene_element scene_element--fadeinright">
+<section class="section project">
+    <div class="display-content yabu-scene">
         <div class="container">
             <div class="main-title">
                 <h1><?php the_title();?></h1>

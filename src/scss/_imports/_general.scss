@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   font-family: $muli;
   font-weight: normal;
   font-size: $bodySize;

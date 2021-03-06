@@ -4,6 +4,8 @@ import Swiper from "swiper/bundle";
 // Import GSAP
 import gsap from "gsap";
 
+import circleProgress from "jquery-circle-progress";
+
 jQuery(document).ready(function ($) {
 
     $(window).load(function(){
@@ -111,7 +113,7 @@ jQuery(document).ready(function ($) {
             gradient: ["#343a40","#5f5f5f"]
         },
         animation: {
-            duration: 4000
+            duration: 5000
         }
     });
     progressBarr.on('circle-animation-progress', function (event, progress, stepValue) {

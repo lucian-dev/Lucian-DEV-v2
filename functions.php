@@ -37,7 +37,6 @@ function yabu_scripts(){
     
     wp_enqueue_script('cookie.js', get_template_directory_uri() . '/assets/js/cookie.js',  array('jquery'), '', true);
     wp_enqueue_script('typed.js', get_template_directory_uri() . '/assets/js/typed.js',  array('jquery'), '', true);
-	wp_enqueue_script('circle-progress.min.js', get_template_directory_uri() . '/assets/js/circle-progress.min.js', array('jquery'), '', true);
 	wp_enqueue_script('main.js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '', true);
 
 }

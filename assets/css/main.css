@@ -216,13 +216,6 @@ a.btn-s:hover {
   color: var(--primary-color);
 }
 
-.btn-filter:active,
-.btn-filter.is-checked,
-.btn-filter.active {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -246,8 +239,13 @@ ul {
 
 .section {
   width: 100%;
-  padding-left: 125px;
+  padding-left: 0;
   background-color: var(--background-color);
+}
+@media (min-width: 1200px) {
+  .section {
+    padding-left: 125px;
+  }
 }
 
 .display-content {
@@ -788,11 +786,11 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 }
 
 .scroll-icon {
+  display: none;
   position: relative;
-  align-self: flex-end;
+  align-self: center;
   width: 30px;
   height: 50px;
-  margin-right: -15px;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -821,6 +819,17 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   z-index: 1;
   -webkit-animation: scroll 2.5s infinite;
           animation: scroll 2.5s infinite;
+}
+@media (min-width: 768px) {
+  .scroll-icon {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .scroll-icon {
+    align-self: flex-end;
+    margin-right: -15px;
+  }
 }
 
 .swiper-container {
@@ -1305,6 +1314,7 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
 }
 
 #progressbar {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -1315,6 +1325,11 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=submit])
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: var(--box-shadow);
   text-align: center;
+}
+@media (min-width: 768px) {
+  #progressbar {
+    display: block;
+  }
 }
 #progressbar strong,
 #progressbar span {
@@ -1517,10 +1532,6 @@ pre code {
 }
 
 @media screen and (max-width: 1200px) {
-  .section {
-    padding-left: 0;
-  }
-
   .main-header {
     transform: translate3d(-125px, 0, 0);
     transition: all 0.3s ease-in-out;
@@ -1548,10 +1559,6 @@ pre code {
   }
   .main-header .smartphone-menu-trigger:after {
     top: 55%;
-  }
-  .main-header .scroll-icon {
-    align-self: center;
-    margin: 0;
   }
 
   .main-header:focus {
@@ -1591,10 +1598,6 @@ pre code {
   }
 }
 @media screen and (max-width: 768px) {
-  .main-header .scroll-icon {
-    display: none;
-  }
-
   .col-sm {
     width: 100%;
     padding: 15px 0;
@@ -1613,10 +1616,6 @@ pre code {
   }
   .loop-testimonials .author-info i {
     padding: 0;
-  }
-
-  #progressbar {
-    display: none;
   }
 }
 @media screen and (max-width: 600px) {

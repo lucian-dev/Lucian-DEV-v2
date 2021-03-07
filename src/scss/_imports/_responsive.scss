@@ -1,7 +1,4 @@
 @media screen and (max-width: 1200px) {
-  .section {
-    padding-left: 0;
-  }
   .main-header {
     transform: translate3d(-125px, 0, 0);
     transition: all 0.3s ease-in-out;
@@ -16,7 +13,7 @@
       cursor: pointer;
       &:before,
       &:after {
-        content: '';
+        content: "";
         width: 50%;
         height: 2px;
         background: var(--background-color);
@@ -29,10 +26,6 @@
       &:after {
         top: 55%;
       }
-    }
-    .scroll-icon {
-      align-self: center;
-      margin: 0;
     }
   }
   .main-header:focus {
@@ -71,11 +64,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .main-header {
-    .scroll-icon {
-      display: none;
-    }
-  }
   .col-sm {
     width: 100%;
     padding: 15px 0;
@@ -95,9 +83,6 @@
         padding: 0;
       }
     }
-  }
-  #progressbar {
-    display: none;
   }
 }
 

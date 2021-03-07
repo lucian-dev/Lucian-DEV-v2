@@ -66,13 +66,6 @@ a.btn-s {
   }
 }
 
-.btn-filter:active,
-.btn-filter.is-checked,
-.btn-filter.active {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -96,8 +89,11 @@ ul {
 
 .section {
   width: 100%;
-  padding-left: 125px;
+  padding-left: 0;
   background-color: var(--background-color);
+  @media (min-width: 1200px) {
+    padding-left: 125px;
+  }
 }
 
 .display-content {

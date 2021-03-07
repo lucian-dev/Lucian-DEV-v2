@@ -170,6 +170,7 @@
 
 // Single Project Progress
 #progressbar {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -180,6 +181,9 @@
   background-color: transparentize(#ffffff, 0.5);
   box-shadow: var(--box-shadow);
   text-align: center;
+  @media (min-width: 768px) {
+    display: block;
+  }
   strong,
   span {
     position: absolute;

@@ -2,7 +2,7 @@
 .rr_projects {
   position: relative;
   &__inner {
-    box-shadow: var(--box-shadow);
+    box-shadow: $boxShadow;
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
@@ -179,7 +179,7 @@
   height: 175px;
   border-radius: 50%;
   background-color: transparentize(#ffffff, 0.5);
-  box-shadow: var(--box-shadow);
+  box-shadow: $boxShadow;
   text-align: center;
   @media (min-width: 768px) {
     display: block;

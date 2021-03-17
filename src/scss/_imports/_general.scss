@@ -30,8 +30,7 @@ a {
   outline: 0;
 }
 
-a.btn,
-.btn-filter {
+a.btn {
   display: inline-block;
   font-family: $poppins;
   font-size: $l-fontSize;
@@ -46,7 +45,7 @@ a.btn,
   letter-spacing: 1px;
   background-color: #ffffff;
   cursor: pointer;
-  box-shadow: var(--box-shadow);
+  box-shadow: $boxShadow;
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: var(--secondary-color);

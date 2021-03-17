@@ -49,7 +49,6 @@
         <?php do_action('yabu_copy_footer' );?>
     </div>
 </footer>
-
 <?php get_template_part('svg');?>
 <?php get_template_part('content','cookie'); ?>
 

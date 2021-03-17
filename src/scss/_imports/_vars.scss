@@ -19,25 +19,9 @@ $primaryColorLt: #343a40;
 $secondaryColorLt: #5f5f5f;
 $boxShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
-//Colors for Dark Mode
-$backgroundColorDt: #343a40;
-$baseColorDt: #ffffff;
-$primaryColorDt: #ffffff;
-$secondaryColorDt: #d6d6d6;
-$boxShadowDt: 2px 0px 5px rgba(200, 200, 200, 0.5);
-
 :root {
   --background-color: #{$backgroundColorLt};
   --base-color: #{$baseColorLt};
   --primary-color: #{$primaryColorLt};
   --secondary-color: #{$secondaryColorLt};
-  --box-shadow: #{$boxShadow};
-}
-
-[data-theme="dark"] {
-  --background-color: #{$backgroundColorDt};
-  --base-color: #{$baseColorDt};
-  --primary-color: #{$primaryColorDt};
-  --secondary-color: #{$secondaryColorDt};
-  --box-shadow: #{$boxShadowDt};
 }

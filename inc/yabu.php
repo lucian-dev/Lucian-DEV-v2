@@ -108,7 +108,8 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' => 'theme-options',
 		'capability' => 'edit_posts',
 		'icon_url' => get_template_directory_uri().'/images/options_yabu.png',
-		'redirect' => false
+		'redirect' => false,
+		'show_in_rest' => true
 	));
 
 }

@@ -138,6 +138,7 @@ function custom_taxonomy_yabu() {
         'show_admin_column'     => true,
         'update_count_callback' => '_update_post_term_count',
         'query_var'             => true,
+        'show_in_rest'          => true,
         'rewrite'               => array('slug' => 'tag'),
     );
 

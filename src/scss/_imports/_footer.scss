@@ -10,7 +10,7 @@
     margin: 50px 15px;
     border-radius: 10px;
     background-color: var(--background-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: $boxShadow;
   }
   .author-image {
     position: relative;
@@ -53,7 +53,7 @@
       color: var(--secondary-color);
       font-size: $sm-fontSize;
       line-height: 1;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     a:hover {
       color: var(--primary-color);
@@ -96,7 +96,7 @@
   a {
     display: inline-block;
     color: var(--secondary-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   a:hover {
     color: var(--primary-color);
@@ -124,11 +124,11 @@
   padding: 15px;
   border-radius: 5px;
   background-color: var(--background-color);
-  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   font-size: $sm-fontSize;
   a {
     color: var(--primary-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   a:hover {
     color: var(--secondary-color);
@@ -139,7 +139,7 @@
     align-items: flex-end;
     span {
       cursor: pointer;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     span:hover {
       color: var(--secondary-color);
@@ -155,11 +155,11 @@
     border-radius: 5px;
     padding: 8px 15px;
     color: $secondaryColorLt;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 10px;
     outline: none;
     border: none;
-    box-shadow: var(--box-shadow);
+    box-shadow: $boxShadow;
     text-transform: uppercase;
   }
   span.accept-cookie:hover {

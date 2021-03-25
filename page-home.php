@@ -31,11 +31,6 @@
 
 <span class="line-separator"></span>
 
-<?php if(get_field('working_project')) : ?>
-    <?php get_template_part( 'content','working' ); ?>
-    <span class="line-separator"></span>
-<?php endif; ?>
-
 <?php get_template_part( 'content','recent-projects' ); ?>
 
 <span class="line-separator"></span>

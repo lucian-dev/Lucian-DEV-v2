@@ -9,7 +9,7 @@
         <div class="container">
             <div class="main-title text-center">
                 <h1><?php echo get_the_title();?></h1>
-                <p><?php esc_html_e( "Some selected projects I've worked on", "yabu" );?></p>
+                <p><?php esc_html_e( "Selected projects I've worked on", 'yabu');?></p>
             </div>
             <?php
             $args = array(

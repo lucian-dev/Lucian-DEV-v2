@@ -17812,16 +17812,7 @@ jQuery(document).ready(function ($) {
     document.getElementById('progressBar').style.height = scrolled + "%";
   }
 
-  ; // Typed Animation
-
-  $('#typed').typed({
-    strings: ["display: flex;\nalign-items: center;\njustify-content: center;"],
-    typeSpeed: 100,
-    backSpeed: 120,
-    backDelay: 80,
-    loop: true,
-    fadeOut: true
-  }); // Slider Testimonials
+  ; // Slider Testimonials
 
   var slideTestimonials = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
     autoplay: {

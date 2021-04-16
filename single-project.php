@@ -37,12 +37,11 @@
                         <strong></strong>
                         <span><?php esc_html_e('Project Complete','yabu');?></span>
                     </div>
-	                <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                    <?php the_post_thumbnail( 'large', array('class' => 'project__image-back'));?>
+	                <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
                     <div class="project__image-front-wrapper">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="">
                         <div class="project__image-front" style="background-image:url(<?php echo $backgroundImg[0] ; ?>);"></div>
                     </div>
+                    <?php the_post_thumbnail( 'large', array('class' => 'project__image-back'));?>
                 </div>
             </div>
         </div>

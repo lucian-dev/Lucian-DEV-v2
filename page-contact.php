@@ -36,9 +36,6 @@
                     <a href="mailto:<?php the_field( 'email' );?>"><?php the_field( 'email' );?></a>
                 </div>
             </div>
-            <div class="form-wrapper">
-                <?php echo do_shortcode(get_field( 'contact_form' ));?>
-            </div>
         </div>
     </div>
 </section>

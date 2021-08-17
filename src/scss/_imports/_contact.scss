@@ -8,14 +8,14 @@
     a {
       display: inline-block;
       color: var(--secondary-color);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     svg {
       width: 25px;
       height: 25px;
       display: block;
       fill: var(--secondary-color);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
         fill: var(--primary-color);
       }
@@ -31,7 +31,4 @@
     width: 25px;
     margin: auto;
   }
-}
-.form-wrapper {
-  margin-top: 40px;
 }

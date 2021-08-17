@@ -17781,24 +17781,6 @@ jQuery(document).ready(function ($) {
       duration: 1.1,
       ease: "power1.inOut"
     });
-  }); //Cookie
-
-  if (Cookies.get('yabu') !== 'closed') {
-    $('.yabu-cookie').delay(3000).fadeIn();
-  }
-
-  ;
-  $('.reject-cookie').on('click', function () {
-    Cookies.set('yabu', 'closed', {
-      expires: 1
-    });
-    $('.yabu-cookie').fadeOut();
-  });
-  $('.accept-cookie').on('click', function () {
-    Cookies.set('yabu', 'closed', {
-      expires: 60
-    });
-    $('.yabu-cookie').fadeOut();
   }); //Progress Bar
 
   window.onscroll = function () {

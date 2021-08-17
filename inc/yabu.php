@@ -22,7 +22,7 @@ add_action( 'login_head', 'yabu_login_logo' );
 
 //Logo Admin area link
 function yabu_login_logo_url() {
-    return 'https://lucian-dev.com/';
+    return 'https://lucian-yabu.dev/';
 }
 add_filter( 'login_headerurl', 'yabu_login_logo_url' );
 
@@ -53,7 +53,7 @@ function yabu_admin_bar_link() {
     $wp_admin_bar->add_menu( array(
         'id'    => 'cwd_link',
         'title' => __( 'YABU' ),
-        'href'  => __( 'https://lucian-dev.com/' ),
+        'href'  => __( 'https://lucian-yabu.dev/' ),
     ));
     $wp_admin_bar->remove_menu( 'wp-logo' );
 }
@@ -74,7 +74,7 @@ add_filter('gettext', 'change_howdy', 10, 3);
 
 //Footer text dashboard
 function left_admin_footer_text_output( $text ) {
-    $text = '<em>Thank you for using Yabu Theme! For questions, contact <a href="https://lucian-dev.com/" target="_blank">Lucian-DEV</a></em>.';
+    $text = '<em>Thank you for using Yabu Theme! For questions, contact <a href="https://lucian-yabu.dev/" target="_blank">Lucian-DEV</a></em>.';
     return $text;
 }
 add_filter( 'admin_footer_text', 'left_admin_footer_text_output' );

@@ -36,21 +36,10 @@
 
 <footer class="section main-footer">
     <div class="container">
-        <div class="menu-footer">
-            <?php
-            wp_nav_menu( array(
-                'theme_location' => 'main-footer',
-                'link_before'    => '<span>',
-                'link_after' => '</span>',
-                'container'=> false,
-            ) );
-            ?>
-        </div>
         <?php do_action('yabu_copy_footer' );?>
     </div>
 </footer>
 <?php get_template_part('svg');?>
-<?php get_template_part('content','cookie'); ?>
 
 <?php wp_footer(); ?>
 </body>

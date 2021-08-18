@@ -49,6 +49,8 @@ require_once "inc/remove-header.php";
 
 require_once "inc/remove-emoji.php";
 
+require_once "inc/remove-comments.php";
+
 //Register Sidebar
 function ya_widgets() {
     register_sidebar( [

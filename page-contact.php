@@ -5,7 +5,7 @@
 <?php get_header();?>
 
 <section class="section contact">
-    <div class="display-content yabu-scene">
+    <div class="display-content">
         <div class="container">
             <div class="main-title text-center">
                 <h1><?php echo get_field( 'main_title_contact' )[ 'title' ];?></h1>

@@ -1,23 +1,12 @@
 // Import Swiper Slider
 import Swiper from "swiper/bundle";
 
-// Import GSAP
-import gsap from "gsap";
-
 import circleProgress from "jquery-circle-progress";
 
 jQuery(document).ready(function ($) {
 
     $(window).load(function(){
-
-        $('.yabu-loader').fadeOut('slow');
         $('.main-header').addClass('headerIn');
-
-        gsap.from(".yabu-scene", {
-            x: "100%",
-            duration: 1.1,
-            ease: "power1.inOut"
-        });
     });
 
     //Progress Bar

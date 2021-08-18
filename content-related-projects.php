@@ -1,5 +1,5 @@
 <section class="section related-projects">
-    <div class="display-content yabu-scene">
+    <div class="display-content">
         <div class="container">
             <div class="main-title">
                 <h2><?php esc_html_e('Other ','yabu');?><span><?php esc_html_e('projects...','yabu');?></span></h2>

@@ -3,7 +3,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
 <section class="section project">
-    <div class="display-content yabu-scene">
+    <div class="display-content">
         <div class="container">
             <div class="main-title">
                 <h1><?php the_title();?></h1>

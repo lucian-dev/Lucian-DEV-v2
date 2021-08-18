@@ -324,19 +324,6 @@ h5 {
   margin: 25px 0;
 }
 
-.yabu-loader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  background: url(../../images/ajax-loader.gif);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #f1f3f6;
-}
-
 span.line-separator {
   position: relative;
   display: block;

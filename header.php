@@ -7,9 +7,6 @@
 
 </head>
 <body <?php body_class()?>>
-<!-- Loader -->
-<div class="yabu-loader"></div>
-<!-- Switch Dark Mode -->
 <header class="main-header" tabindex="0">
     <div class="progress-bar" id="progressBar"></div>
     <div class="smartphone-menu-trigger"></div>

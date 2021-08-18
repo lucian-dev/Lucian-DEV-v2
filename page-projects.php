@@ -5,7 +5,7 @@
 <?php get_header();?>
 
 <section class="section projects">
-    <div class="display-content yabu-scene">
+    <div class="display-content">
         <div class="container">
             <div class="main-title text-center">
                 <h1><?php echo get_the_title();?></h1>
